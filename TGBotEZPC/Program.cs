@@ -1,14 +1,10 @@
-﻿using System;
-using System.Reflection.Metadata;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json.Linq;
 using Telegram.Bot;
-using Telegram.Bot.Types;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Exceptions;
+using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace TelegramBotExperiments
+namespace TGBotEZPC
 {
     class Program
     {
@@ -18,8 +14,8 @@ namespace TelegramBotExperiments
         private const string TEXT_4 = "Четыре";*/
         
         // bot part
-        private static string TOKEN = "6215214413:AAE2GxGrUbgCqP_QyuZ7bNG-GGm_jeC1rTE";
-        static ITelegramBotClient bot = new TelegramBotClient(TOKEN);
+        private static string _token = "6215214413:AAE2GxGrUbgCqP_QyuZ7bNG-GGm_jeC1rTE";
+        static ITelegramBotClient _bot = new TelegramBotClient(_token);
 
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update,
             CancellationToken cancellationToken)
@@ -75,7 +71,15 @@ namespace TelegramBotExperiments
         }
         
         // parser part
-        
+        static void StartParser()
+        {
+            var request = new GetRequest("ADDRESS");
+            request.Run();
+
+            var response = request.Response;
+
+            var jsonResponse = JObject.Parse(response);
+        }
         
         //main function
         static void Main(string[] args)
@@ -86,7 +90,7 @@ namespace TelegramBotExperiments
             var inpt = Console.ReadLine()?.ToString();
             if (inpt == "1")
             {
-                Console.WriteLine("Запущен бот " + bot.GetMeAsync().Result.FirstName);
+                Console.WriteLine("Запущен бот " + _bot.GetMeAsync().Result.FirstName);
 
                 var cts = new CancellationTokenSource();
                 var cancellationToken = cts.Token;
@@ -94,7 +98,7 @@ namespace TelegramBotExperiments
                 {
                     AllowedUpdates = { }, // receive all update types
                 };
-                bot.StartReceiving(HandleUpdateAsync, HandleErrorAsync, receiverOptions, cancellationToken);
+                _bot.StartReceiving(HandleUpdateAsync, HandleErrorAsync, receiverOptions, cancellationToken);
                 Console.ReadLine();
             }
             else if (inpt == "2")
