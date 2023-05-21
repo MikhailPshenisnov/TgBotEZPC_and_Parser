@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj": {}
+    "C:\\Users\\Frozin\\RiderProjects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj": {}
   },
   "projects": {
-    "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj": {
+    "C:\\Users\\Frozin\\RiderProjects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj",
+        "projectUniqueName": "C:\\Users\\Frozin\\RiderProjects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj",
         "projectName": "TGBotEZPC",
-        "projectPath": "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\obj\\",
+        "projectPath": "C:\\Users\\Frozin\\RiderProjects\\TgBotEZPC_and_Parser\\TGBotEZPC\\TGBotEZPC.csproj",
+        "packagesPath": "C:\\Users\\Frozin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Frozin\\RiderProjects\\TgBotEZPC_and_Parser\\TGBotEZPC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Frozin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
