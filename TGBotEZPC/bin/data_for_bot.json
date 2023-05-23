@@ -1,0 +1,127 @@
+{
+    "5431": {
+        "categoryName": "Процессоры",
+        "data": {
+            "30064120": {
+                "name": "Процессор Intel Core i3-10100 Box",
+                "brand_name": "Intel",
+                "price": 9499,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10100-box-30064120",
+                "socket": "1200",
+                "cores": "4",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "4300 МГц"
+            },
+            "30061650": {
+                "name": "Процессор Intel Core i3-10100 (BX8070110100SRH3N)",
+                "brand_name": "Intel",
+                "price": 11499,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10100-bx8070110100srh3n-30061650",
+                "socket": "1200",
+                "cores": "4",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "4300 МГц"
+            },
+            "30064134": {
+                "name": "Процессор Intel Core i5-11600K Box",
+                "brand_name": "Intel",
+                "price": 18999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600k-box-30064134",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "3900 МГц",
+                "turbo_frequency": "4900 МГц"
+            },
+            "30064135": {
+                "name": "Процессор Intel Core i5-11600KF Box",
+                "brand_name": "Intel",
+                "price": 18899,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600kf-box-30064135",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "3900 МГц",
+                "turbo_frequency": "4900 МГц"
+            },
+            "30064170": {
+                "name": "Процессор Intel Core i7-12700KF Box",
+                "brand_name": "Intel",
+                "price": 34999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i7-12700kf-box-30064170",
+                "socket": "1700",
+                "cores": "12",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "5000 МГц"
+            },
+            "30057992": {
+                "name": "Процессор Intel Core i5-10400 (BX8070110400SRH3C)",
+                "brand_name": "Intel",
+                "price": 14599,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-10400-bx8070110400srh3c-30057992",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "2900 МГц",
+                "turbo_frequency": "4300 МГц"
+            },
+            "30057993": {
+                "name": "Процессор Intel Core i5-10400F (BX8070110400FSRH79)",
+                "brand_name": "Intel",
+                "price": 12999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-10400f-bx8070110400fsrh79-30057993",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "2900 МГц",
+                "turbo_frequency": "4300 МГц"
+            },
+            "30062407": {
+                "name": "Процессор Intel CORE I3-10105F S1200 3.7G (BX8070110105F S RH8V)",
+                "brand_name": "Intel",
+                "price": 8499,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10105f-s1200-37g-bx8070110105f-s-rh8v-30062407",
+                "socket": "1200",
+                "cores": "4",
+                "frequency": "3700 МГц",
+                "turbo_frequency": "4400 МГц"
+            },
+            "30062442": {
+                "name": "Процессор Intel Celeron G5925 S1200 3.6G (BX80701G5925 S RK26)",
+                "brand_name": "Intel",
+                "price": 5699,
+                "link": "https://www.mvideo.ru/products/processor-intel-celeron-g5925-s1200-36g-bx80701g5925-s-rk26-30062442",
+                "socket": "1200",
+                "cores": "2",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "-"
+            },
+            "30063796": {
+                "name": "Процессор Intel Core i7-11700 Box",
+                "brand_name": "Intel",
+                "price": 32999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i7-11700-box-30063796",
+                "socket": "1200",
+                "cores": "8",
+                "frequency": "2500 МГц",
+                "turbo_frequency": "4900 МГц"
+            },
+            "30063797": {
+                "name": "Процессор Intel Core i7-11700F Box",
+                "brand_name": "Intel",
+                "price": 25999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i7-11700f-box-30063797",
+                "socket": "1200",
+                "cores": "8",
+                "frequency": "2500 МГц",
+                "turbo_frequency": "4900 МГц"
+            },
+            "400030379": {
+                "name": "Процессор AMD Ryzen 3 PRO 4350G OEM",
+                "brand_name": "AMD",
+                "price": 12490,
+                "link": "https://www.mvideo.ru/products/processor-amd-ryzen-3-pro-4350g-oem-400030379",
+                "socket": "AM4",
+                "cores": "4",
+                "frequency": "3800 МГц",
+                "turbo_frequency": "4000 МГц"
+            }
+        }
+    }
+}

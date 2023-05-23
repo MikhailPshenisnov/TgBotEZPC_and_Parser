@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Diagnostics;
+using Newtonsoft.Json.Linq;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
@@ -13,7 +14,7 @@ namespace TGBotEZPC
         private const string TEXT_3 = "Три";
         private const string TEXT_4 = "Четыре";*/
         
-        // bot part
+        // bot part --------------------------------------------------------------------------------------------------
         private static string _token = "6215214413:AAE2GxGrUbgCqP_QyuZ7bNG-GGm_jeC1rTE";
         static ITelegramBotClient _bot = new TelegramBotClient(_token);
 
@@ -70,40 +71,97 @@ namespace TGBotEZPC
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
         }
         
-        // parser part
+        // parser part ----------------------------------------------------------------------------------------------
+        
+        //Эта функция запускает парсер и выводит некоторую информацию для отладки
         static void StartParser()
         {
-            var request = new GetRequest("ADDRESS");
-            request.Run();
+            Console.WriteLine("Запущен парсер, производится обновление файлов");
+            
+            // Получение пути до папки с файлами
+            var exePath = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+            var binPath = exePath.Parent.Parent.FullName; // Возможно здесь есть ошибка в пути, но вроде работает
 
-            var response = request.Response;
+            /*
+            Здесь может быть проблема с несоответствием пути к интерпретатору,
+            нужно его поменять, мой закомментируй, свой допиши (строчка ниже)2
+            */
+            
+            var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe";
+            // var pythonPath = @"ТВОЙ ПУТЬ К python.exe";
+            
+            var pythonScriptName = "\\PythonParser.py";
 
-            var jsonResponse = JObject.Parse(response);
+            Console.WriteLine("Запущен Python скрипт");
+            DoPythonScript(pythonPath, binPath + pythonScriptName, binPath);
+            }
+        
+        // Эта функция запускает Python скрипт и передает в него информацию о текущей директории
+        static void DoPythonScript(string pythonPath, string scriptPath, string binPath)
+        {
+            var psi = new ProcessStartInfo();
+            var errors = "";
+            var results = "";
+
+            psi.FileName = pythonPath;
+            psi.Arguments = $"\"{scriptPath}\" \"{binPath}\"";
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            
+            Console.WriteLine($"Выполняется Python скрипт \"{scriptPath}\"");
+            Console.WriteLine("----------------------------------------------------------------------------------");
+                
+            using (var process = Process.Start(psi))
+            {
+                errors = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+            }
+            
+            Console.WriteLine($"Вывод во время выполнения скрипта: {results}");
+            Console.WriteLine("..................................................................................");
+            Console.WriteLine($"Ошибки во время выполнения скрипта: {errors}");
+            
+            Console.WriteLine("----------------------------------------------------------------------------------");
+            Console.WriteLine("Выполнение Python скрипта завершено");
         }
         
         //main function
         static void Main(string[] args)
         {
+            // Интерфейс выбора режима программы
             Console.WriteLine($"Введите 1 для запуска бота, " +
-                              $"введите 2 для запуска парсера и обновления перечня комплектующих " +
+                              $"Введите 2 для запуска парсера и обновления перечня комплектующих " +
+                              $"НЕ ЗАБУДЬТЕ ОБНОВИТЬ ФАЙЛЫ COOKIE В СООТВЕТСТВУЮЩЕМ ФАЙЛЕ " +
                               $"(не рекомендуется выполнять чаще нескольких раз в месяц)");
-            var inpt = Console.ReadLine()?.ToString();
+            var inpt = Console.ReadLine();
+            
+            // Обработка выбора
             if (inpt == "1")
             {
+                // Запускается бота
+                /*Нужно засунуть это в отдельную функцию*/
                 Console.WriteLine("Запущен бот " + _bot.GetMeAsync().Result.FirstName);
 
                 var cts = new CancellationTokenSource();
                 var cancellationToken = cts.Token;
                 var receiverOptions = new ReceiverOptions
                 {
-                    AllowedUpdates = { }, // receive all update types
+                    AllowedUpdates = { },
                 };
                 _bot.StartReceiving(HandleUpdateAsync, HandleErrorAsync, receiverOptions, cancellationToken);
-                Console.ReadLine();
+                Console.ReadLine(); 
             }
             else if (inpt == "2")
             {
-                Console.Write("Я - парсер, и я обновляю данные");
+                // Запускается парсер
+                StartParser();
+            }
+            else
+            {
+                // Обработка ввода, чтобы была
+                Console.WriteLine("Что-то пошло не так, попробуйте снова :( ");
             }
         }
     }
