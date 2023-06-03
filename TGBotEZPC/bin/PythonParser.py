@@ -53,6 +53,7 @@ def getData(categoryID):
     time.sleep(5)  # Это чтобы сервак нас не забанил
 
     number_of_items = int(test_response_for_ids["body"]["total"])
+    number_of_items %= 25
 
     if number_of_items is None:
         return [[], {}, {}]
@@ -103,7 +104,9 @@ def getData(categoryID):
                                            cookies=COOKIES,
                                            headers=HEADERS,
                                            json=json_data_for_properties
-                                           ).json()["body"]["products"]
+                                           ).json()
+    pprint(response_for_properties)
+    response_for_properties = response_for_properties["body"]["products"]
     time.sleep(5)
 
     # Получаем данные о ценах на товары на страницах
@@ -182,51 +185,108 @@ def getInfoForVideoCards():
     global DATA_DICTIONARY
     categotyID = "5429"
     categoryName = "Видеокарты"
-    processorsData = {}
+    videocardsData = {}
 
     ids, properties_response, prices = getData(categotyID)
-
-    pprint(properties_response)
+    
     for product in properties_response:
         product_id = product["productId"]
         product_name = product["name"]
         product_brand_name = product["brandName"]
         product_link = f"https://www.mvideo.ru/products/{product['nameTranslit']}-{product['productId']}"
-        product_socket = "-"
-        product_cores = "-"
-        product_frequency = "-"
-        product_turbo_frequency = "-"
-        product_termal = "-"
+        product_video_memory = "-"
+        product_video_memory_type = "-"
+        product_processor_frequency = "-"
+        product_memory_frequency = "-"
+        product_HDMI = "-"
+        product_DP = "-"
+        product_recommended_power = "-"
 
         propertiesPortion = product["propertiesPortion"]
         for property in propertiesPortion:
-            if property["name"] == "Сокет":
-                product_socket = property["value"]
-            elif property["name"] == "Количество ядер":
-                product_cores = property["value"]
-            elif property["name"] == "Тактовая частота":
-                product_frequency = f"{property['value']} {property['measure']}"
-            elif property["name"] == "Частота в режиме Turbo":
-                product_turbo_frequency = f"{property['value']} {property['measure']}"
-            elif property["name"] == "Тепловыделение":
-                product_termal = f"{property['value']} {property['measure']}"
+            if property["name"] == "Объем видеопамяти":
+                product_video_memory = property["value"]
+            elif property["name"] == "Тип видеопамяти":
+                product_video_memory_type = property["value"]
+            elif property["name"] == "Частота графического процессора":
+                product_processor_frequency = f"{property['value']} {property['measure']}"
+            elif property["name"] == "Частота памяти":
+                product_memory_frequency = f"{property['value']} {property['measure']}"
+            elif property["name"] == "Выход HDMI":
+                product_HDMI = f"{property['value']} {property['measure']}"
+            elif property["name"] == "DisplayPort":
+                product_DP = f"{property['value']} {property['measure']}"
+            elif property["name"] == "Рекомендуемая мощность БП":
+                product_recommended_power = f"{property['value']} {property['measure']}"
 
-        processorsData[product_id] = {"name": product_name,
+        videocardsData[product_id] = {"name": product_name,
                                       "brand_name": product_brand_name,
                                       "price": prices[product_id]["price"],
                                       "link": product_link,
-                                      "socket": product_socket,
-                                      "cores": product_cores,
-                                      "frequency": product_frequency,
-                                      "turbo_frequency": product_turbo_frequency,
-                                      "Тепловыделение": product_termal}
+                                      "product_video_memory": product_video_memory,
+                                      "product_video_memory_type": product_video_memory_type,
+                                      "product_processor_frequency": product_processor_frequency,
+                                      "product_memory_frequency": product_memory_frequency, 
+                                      "product_HDMI": product_HDMI, 
+                                      "product_DP": product_DP, 
+                                      "product_recommended_power": product_recommended_power}
     DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": processorsData}
+                                   "data": videocardsData}
 
 
 # Функция получает детализированные данные для жестких дисков (НЕ ДОДЕЛАНО)
 def getInfoForMemory():
-    pass
+    global DATA_DICTIONARY
+    categotyID = "5446"
+    categoryName = "Жесткие диски"
+    memoryData = {}
+
+    ids, properties_response, prices = getData(categotyID)
+    pprint(properties_response)
+    
+    # for product in properties_response:
+    #     product_id = product["productId"]
+    #     product_name = product["name"]
+    #     product_brand_name = product["brandName"]
+    #     product_link = f"https://www.mvideo.ru/products/{product['nameTranslit']}-{product['productId']}"
+    #     product_video_memory = "-"
+    #     product_video_memory_type = "-"
+    #     product_processor_frequency = "-"
+    #     product_memory_frequency = "-"
+    #     product_HDMI = "-"
+    #     product_DP = "-"
+    #     product_recommended_power = "-"
+    # 
+    #     propertiesPortion = product["propertiesPortion"]
+    #     for property in propertiesPortion:
+    #         if property["name"] == "Объем видеопамяти":
+    #             product_video_memory = property["value"]
+    #         elif property["name"] == "Тип видеопамяти":
+    #             product_video_memory_type = property["value"]
+    #         elif property["name"] == "Частота графического процессора":
+    #             product_processor_frequency = f"{property['value']} {property['measure']}"
+    #         elif property["name"] == "Частота памяти":
+    #             product_memory_frequency = f"{property['value']} {property['measure']}"
+    #         elif property["name"] == "Выход HDMI":
+    #             product_HDMI = f"{property['value']} {property['measure']}"
+    #         elif property["name"] == "DisplayPort":
+    #             product_DP = f"{property['value']} {property['measure']}"
+    #         elif property["name"] == "Рекомендуемая мощность БП":
+    #             product_recommended_power = f"{property['value']} {property['measure']}"
+    # 
+    #     videocardsData[product_id] = {"name": product_name,
+    #                                   "brand_name": product_brand_name,
+    #                                   "price": prices[product_id]["price"],
+    #                                   "link": product_link,
+    #                                   "product_video_memory": product_video_memory,
+    #                                   "product_video_memory_type": product_video_memory_type,
+    #                                   "product_processor_frequency": product_processor_frequency,
+    #                                   "product_memory_frequency": product_memory_frequency,
+    #                                   "product_HDMI": product_HDMI,
+    #                                   "product_DP": product_DP,
+    #                                   "product_recommended_power": product_recommended_power}
+    # DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
+    #                                "data": videocardsData}
 
 
 # Функция получает детализированные данные для оперативной памяти (НЕ ДОДЕЛАНО)
@@ -256,11 +316,11 @@ def updateDataFile():
 
 
 # Действия по обновлению информации
-getInfoForProcessors()
+# getInfoForProcessors()
 # getInfoForVideoCards()
+getInfoForMemory()
 #
 #
 #
 #
-#
-updateDataFile()
+# updateDataFile()

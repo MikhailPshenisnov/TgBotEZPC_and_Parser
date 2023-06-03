@@ -12,6 +12,50 @@
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+      <Content Include="bin\cookies_and_headers.json" />
+      <Content Include="bin\data_for_bot.json" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.CommandLine.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.Json.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Configuration.UserSecrets.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Hosting.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Http.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Http.Polly.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.Configuration.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.Console.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.Debug.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.EventLog.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.EventSource.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Options.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll" />
+      <Content Include="bin\Debug\net7.0\Newtonsoft.Json.dll" />
+      <Content Include="bin\Debug\net7.0\Polly.dll" />
+      <Content Include="bin\Debug\net7.0\Polly.Extensions.Http.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll" />
+      <Content Include="bin\Debug\net7.0\System.Diagnostics.EventLog.dll" />
+      <Content Include="bin\Debug\net7.0\Telegram.Bot.dll" />
+      <Content Include="bin\Debug\net7.0\Telegram.Bots.dll" />
+      <Content Include="bin\Debug\net7.0\Telegram.Bots.Extensions.Polling.dll" />
+      <Content Include="bin\Debug\net7.0\TGBotEZPC.deps.json" />
+      <Content Include="bin\Debug\net7.0\TGBotEZPC.dll" />
+      <Content Include="bin\Debug\net7.0\TGBotEZPC.exe" />
+      <Content Include="bin\Debug\net7.0\TGBotEZPC.pdb" />
+      <Content Include="bin\Debug\net7.0\TGBotEZPC.runtimeconfig.json" />
+      <Content Include="bin\PythonParser.py" />
     </ItemGroup>
 
     <ItemGroup>
