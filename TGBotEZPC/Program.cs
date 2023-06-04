@@ -88,9 +88,9 @@ namespace TGBotEZPC
             нужно его поменять, мой закомментируй, свой допиши (строчка ниже)
             */
 
-            // var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe"; // Мишаня ПК
+            var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe"; // Мишаня ПК
             // var pythonPath = @"ТВОЙ ПУТЬ К python.exe"; // Санечка
-            var pythonPath = @"C:\Users\misha\AppData\Local\Programs\Python\Python311\python.exe"; // Мишаня ноут
+            // var pythonPath = @"C:\Users\misha\AppData\Local\Programs\Python\Python311\python.exe"; // Мишаня ноут
 
             var pythonScriptName = "\\PythonParser.py";
 
