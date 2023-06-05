@@ -1,16 +1,15 @@
 import json
 import math
-import pprint
+import random
 import sys
 import time
 
 import requests
 
-# cur_directory = sys.argv[1]
-
-cur_directory = "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\bin"  # Мишаня ПК             // FOR DEBUG //
+cur_directory = sys.argv[1]
 
 
+# cur_directory = "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\bin"  # Мишаня ПК             // FOR DEBUG //
 # cur_directory = "Твойпутьдобинарейвпроекте"  # Санечка                                            // FOR DEBUG //
 # cur_directory = "D:\\RiderPojects\\ForTestsWithoutGIT\\ForTestsWithoutGIT\\bin"  # Мишаня ноут    // FOR DEBUG //
 
@@ -50,7 +49,7 @@ def getData(categoryID):
                                         cookies=COOKIES,
                                         headers=HEADERS
                                         ).json()
-    time.sleep(3)  # Это чтобы сервак нас не забанил
+    time.sleep(random.randint(3, 6))  # Это чтобы сервак нас не забанил
 
     number_of_items = int(test_response_for_ids["body"]["total"])
 
@@ -80,7 +79,7 @@ def getData(categoryID):
                                        cookies=COOKIES,
                                        headers=HEADERS
                                        ).json()
-        time.sleep(3)
+        time.sleep(random.randint(3, 6))
 
         page_ids = response_for_ids["body"]["products"]
         list_of_ids.extend(page_ids)
@@ -107,7 +106,7 @@ def getData(categoryID):
                                                    headers=HEADERS,
                                                    json=json_data_for_properties
                                                    ).json()
-        time.sleep(3)
+        time.sleep(random.randint(3, 6))
 
         response_for_properties.append(tmp_response_for_properties["body"]["products"])
 
@@ -127,7 +126,7 @@ def getData(categoryID):
                                           cookies=COOKIES,
                                           headers=HEADERS
                                           ).json()
-        time.sleep(3)
+        time.sleep(random.randint(3, 6))
 
         material_prices = response_for_prices["body"]["materialPrices"]
 
@@ -148,6 +147,7 @@ def getInfoForProcessors():
     processorsData = {}
 
     ids, properties_response, prices = getData(categotyID)
+
     for properties_response_part in properties_response:
         for product in properties_response_part:
             product_id = product["productId"]
@@ -158,6 +158,7 @@ def getInfoForProcessors():
             product_cores = "-"
             product_frequency = "-"
             product_turbo_frequency = "-"
+            product_heat = "-"
 
             propertiesPortion = product["propertiesPortion"]
             for property in propertiesPortion:
@@ -169,6 +170,11 @@ def getInfoForProcessors():
                     product_frequency = f"{property['value']} {property['measure']}"
                 elif property["name"] == "Частота в режиме Turbo":
                     product_turbo_frequency = f"{property['value']} {property['measure']}"
+                elif property["name"] == "Тепловыделение":
+                    product_heat = f"{property['value']} {property['measure']}"
+
+            if product_heat == "-":
+                product_heat = "125 Вт"
 
             processorsData[product_id] = {"name": product_name,
                                           "brand_name": product_brand_name,
@@ -177,7 +183,8 @@ def getInfoForProcessors():
                                           "socket": product_socket,
                                           "cores": product_cores,
                                           "frequency": product_frequency,
-                                          "turbo_frequency": product_turbo_frequency}
+                                          "turbo_frequency": product_turbo_frequency,
+                                          "heat": product_heat}
 
     # Добавление полученных данных в общий словарь (не обновляет JSON файл)
     DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
@@ -223,6 +230,9 @@ def getInfoForVideoCards():
                     product_DP = property["value"]
                 elif property["name"] == "Рекомендуемая мощность БП":
                     product_recommended_power = f"{property['value']} {property['measure']}"
+
+            if product_recommended_power == "-":
+                product_recommended_power = "600 Вт"
 
             videocardsData[product_id] = {"name": product_name,
                                           "brand_name": product_brand_name,
@@ -385,7 +395,7 @@ def getInfoForRAM():
                                    "data": RAMData}
 
 
-# Функция получает детализированные данные для материнских плат (НЕ ДОДЕЛАНО)
+# Функция получает детализированные данные для материнских плат
 def getInfoForMotherBoards():
     global DATA_DICTIONARY
     categotyID = "5432"
@@ -464,14 +474,158 @@ def getInfoForMotherBoards():
                                    "data": MotherBoardsData}
 
 
-# Функция получает детализированные данные для блоков питания (НЕ ДОДЕЛАНО)
+# Функция получает детализированные данные для блоков питания
 def getInfoForPower():
-    pass
+    global DATA_DICTIONARY
+    categotyID = "5435"
+    categoryName = "Блоки питания"
+    PowerData = {}
+
+    ids, properties_response, prices = getData(categotyID)
+
+    for properties_response_part in properties_response:
+        for product in properties_response_part:
+            product_id = product["productId"]
+            product_name = product["name"]
+            product_brand_name = product["brandName"]
+            product_link = f"https://www.mvideo.ru/products/{product['nameTranslit']}-{product['productId']}"
+
+            product_power = "-"
+            product_standard = "-"
+            product_overload_protection = "-"
+            product_surge_protection = "-"
+
+            propertiesPortion = product["propertiesPortion"]
+            for property in propertiesPortion:
+                if property["name"] == "Мощность":
+                    product_power = f"{property['value']} {property['measure']}"
+                elif property["name"] == "Стандарт":
+                    product_standard = property['value']
+                elif property["name"] == "Защита от перегрузки":
+                    product_overload_protection = property['value']
+                elif property["name"] == "Защита от перенапряжения":
+                    product_surge_protection = property['value']
+
+            PowerData[product_id] = {"name": product_name,
+                                     "brand_name": product_brand_name,
+                                     "price": prices[product_id]["price"],
+                                     "link": product_link,
+                                     "power": product_power,
+                                     "standard": product_standard,
+                                     "overload_protection": product_overload_protection,
+                                     "surge_protection": product_surge_protection}
+    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
+                                   "data": PowerData}
 
 
-# Функция получает детализированные данные для корпусов (НЕ ДОДЕЛАНО)
+# Функция получает детализированные данные для корпусов
 def getInfoForBody():
-    pass
+    global DATA_DICTIONARY
+    categotyID = "5434"
+    categoryName = "Корпуса"
+    BodyData = {}
+
+    sizes = {"Midi-Tower": ["Mini-ITX", "Micro-ATX", "ATX"],
+             "Mini-Tower": ["Mini-ITX", "Micro-ATX"],
+             "Slim Desktop": ["Mini-ITX", "Micro-ATX"],
+             "DeskTop": ["Mini-ITX", "Micro-ATX", "ATX"]}
+
+    ids, properties_response, prices = getData(categotyID)
+
+    for properties_response_part in properties_response:
+        for product in properties_response_part:
+            product_id = product["productId"]
+            product_name = product["name"]
+            product_brand_name = product["brandName"]
+            product_link = f"https://www.mvideo.ru/products/{product['nameTranslit']}-{product['productId']}"
+
+            product_size = "-"
+            product_3_5 = "-"
+            product_usb_3_0 = "-"
+            product_weight = "-"
+            product_material = "-"
+            product_color = "-"
+
+            propertiesPortion = product["propertiesPortion"]
+            for property in propertiesPortion:
+                if property["name"] == "Типоразмер":
+                    product_size = property['value']
+                elif "Внутренние отсеки 3.5" in property["name"]:
+                    product_3_5 = property['value']
+                elif property["name"] == "Порт USB 3.0":
+                    product_usb_3_0 = property['value']
+                elif property["name"] == "Вес":
+                    product_weight = f"{property['value']} {property['measure']}"
+                elif property["name"] == "Материал корпуса":
+                    product_material = property['value']
+                elif property["name"] == "Цвет":
+                    product_color = property['value']
+
+            if product_size == "-":
+                continue
+            else:
+                product_size_properties = {"size": product_size,
+                                           "suitable_motherboards": sizes[product_size]}
+
+            BodyData[product_id] = {"name": product_name,
+                                    "brand_name": product_brand_name,
+                                    "price": prices[product_id]["price"],
+                                    "link": product_link,
+                                    "size_properties": product_size_properties,
+                                    "3_5": product_3_5,
+                                    "usb_3_0": product_usb_3_0,
+                                    "weight": product_weight,
+                                    "material": product_material,
+                                    "color": product_color}
+    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
+                                   "data": BodyData}
+
+
+# Функция получает детализированные данные для процессорных кулеров
+def getInfoForProcessorCoolers():
+    global DATA_DICTIONARY
+    categotyID = "7927"
+    categoryName = "Кулеры для процессоров"
+    ProcessorCoolersData = {}
+
+    ids, properties_response, prices = getData(categotyID)
+
+    for properties_response_part in properties_response:
+        for product in properties_response_part:
+            product_id = product["productId"]
+            product_name = product["name"]
+            product_brand_name = product["brandName"]
+            product_link = f"https://www.mvideo.ru/products/{product['nameTranslit']}-{product['productId']}"
+
+            product_max_power_dissipation = "-"
+            product_height = "-"
+            product_fans = "-"
+            product_noise = "-"
+
+            propertiesPortion = product["propertiesPortion"]
+            for property in propertiesPortion:
+                if property["name"] == "Максимальная рассеиваемая мощность":
+                    product_max_power_dissipation = f"{property['value']} {property['measure']}"
+                elif property["name"] == "Высота кулера":
+                    product_height = f"{property['value']} {property['measure']}"
+                elif property["name"] == "Количество вентиляторов":
+                    product_fans = property['value']
+                elif property["name"] == "Уровень шума":
+                    product_noise = property['value']
+
+            if product_max_power_dissipation == "-":
+                continue
+
+            ProcessorCoolersData[product_id] = {"name": product_name,
+                                                "brand_name": product_brand_name,
+                                                "price": prices[product_id]["price"],
+                                                "link": product_link,
+                                                "max_power_dissipation": product_max_power_dissipation,
+                                                "height": product_height,
+                                                "fans": product_fans,
+                                                "noise": product_noise}
+    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
+                                   "data": ProcessorCoolersData}
 
 
 # Функция обновляет JSON файл с данными
@@ -486,6 +640,7 @@ getInfoForVideoCards()
 getInfoForMemory()
 getInfoForRAM()
 getInfoForMotherBoards()
-# getInfoForPower()
-# getInfoForBody()
+getInfoForPower()
+getInfoForBody()
+getInfoForProcessorCoolers()
 updateDataFile()

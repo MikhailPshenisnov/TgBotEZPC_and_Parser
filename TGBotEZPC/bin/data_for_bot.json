@@ -10,77 +10,8 @@
                 "socket": "1200",
                 "cores": "4",
                 "frequency": "3600 МГц",
-                "turbo_frequency": "4300 МГц"
-            },
-            "30061650": {
-                "name": "Процессор Intel Core i3-10100 (BX8070110100SRH3N)",
-                "brand_name": "Intel",
-                "price": 11499,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10100-bx8070110100srh3n-30061650",
-                "socket": "1200",
-                "cores": "4",
-                "frequency": "3600 МГц",
-                "turbo_frequency": "4300 МГц"
-            },
-            "30064134": {
-                "name": "Процессор Intel Core i5-11600K Box",
-                "brand_name": "Intel",
-                "price": 18999,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600k-box-30064134",
-                "socket": "1200",
-                "cores": "6",
-                "frequency": "3900 МГц",
-                "turbo_frequency": "4900 МГц"
-            },
-            "30064135": {
-                "name": "Процессор Intel Core i5-11600KF Box",
-                "brand_name": "Intel",
-                "price": 18899,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600kf-box-30064135",
-                "socket": "1200",
-                "cores": "6",
-                "frequency": "3900 МГц",
-                "turbo_frequency": "4900 МГц"
-            },
-            "30064170": {
-                "name": "Процессор Intel Core i7-12700KF Box",
-                "brand_name": "Intel",
-                "price": 34999,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i7-12700kf-box-30064170",
-                "socket": "1700",
-                "cores": "12",
-                "frequency": "3600 МГц",
-                "turbo_frequency": "5000 МГц"
-            },
-            "30057992": {
-                "name": "Процессор Intel Core i5-10400 (BX8070110400SRH3C)",
-                "brand_name": "Intel",
-                "price": 14599,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-10400-bx8070110400srh3c-30057992",
-                "socket": "1200",
-                "cores": "6",
-                "frequency": "2900 МГц",
-                "turbo_frequency": "4300 МГц"
-            },
-            "30062407": {
-                "name": "Процессор Intel CORE I3-10105F S1200 3.7G (BX8070110105F S RH8V)",
-                "brand_name": "Intel",
-                "price": 8499,
-                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10105f-s1200-37g-bx8070110105f-s-rh8v-30062407",
-                "socket": "1200",
-                "cores": "4",
-                "frequency": "3700 МГц",
-                "turbo_frequency": "4400 МГц"
-            },
-            "30062442": {
-                "name": "Процессор Intel Celeron G5925 S1200 3.6G (BX80701G5925 S RK26)",
-                "brand_name": "Intel",
-                "price": 5699,
-                "link": "https://www.mvideo.ru/products/processor-intel-celeron-g5925-s1200-36g-bx80701g5925-s-rk26-30062442",
-                "socket": "1200",
-                "cores": "2",
-                "frequency": "3600 МГц",
-                "turbo_frequency": "-"
+                "turbo_frequency": "4300 МГц",
+                "heat": "65 Вт"
             },
             "30063796": {
                 "name": "Процессор Intel Core i7-11700 Box",
@@ -90,7 +21,8 @@
                 "socket": "1200",
                 "cores": "8",
                 "frequency": "2500 МГц",
-                "turbo_frequency": "4900 МГц"
+                "turbo_frequency": "4900 МГц",
+                "heat": "65 Вт"
             },
             "30063797": {
                 "name": "Процессор Intel Core i7-11700F Box",
@@ -100,13 +32,82 @@
                 "socket": "1200",
                 "cores": "8",
                 "frequency": "2500 МГц",
-                "turbo_frequency": "4900 МГц"
+                "turbo_frequency": "4900 МГц",
+                "heat": "65 Вт"
+            },
+            "30062407": {
+                "name": "Процессор Intel CORE I3-10105F S1200 3.7G (BX8070110105F S RH8V)",
+                "brand_name": "Intel",
+                "price": 8499,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i3-10105f-s1200-37g-bx8070110105f-s-rh8v-30062407",
+                "socket": "1200",
+                "cores": "4",
+                "frequency": "3700 МГц",
+                "turbo_frequency": "4400 МГц",
+                "heat": "65 Вт"
+            },
+            "30062442": {
+                "name": "Процессор Intel Celeron G5925 S1200 3.6G (BX80701G5925 S RK26)",
+                "brand_name": "Intel",
+                "price": 5699,
+                "link": "https://www.mvideo.ru/products/processor-intel-celeron-g5925-s1200-36g-bx80701g5925-s-rk26-30062442",
+                "socket": "1200",
+                "cores": "2",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "-",
+                "heat": "58 Вт"
+            },
+            "30064134": {
+                "name": "Процессор Intel Core i5-11600K Box",
+                "brand_name": "Intel",
+                "price": 18999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600k-box-30064134",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "3900 МГц",
+                "turbo_frequency": "4900 МГц",
+                "heat": "125 Вт"
+            },
+            "30064135": {
+                "name": "Процессор Intel Core i5-11600KF Box",
+                "brand_name": "Intel",
+                "price": 18899,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i5-11600kf-box-30064135",
+                "socket": "1200",
+                "cores": "6",
+                "frequency": "3900 МГц",
+                "turbo_frequency": "4900 МГц",
+                "heat": "125 Вт"
+            },
+            "30064170": {
+                "name": "Процессор Intel Core i7-12700KF Box",
+                "brand_name": "Intel",
+                "price": 34999,
+                "link": "https://www.mvideo.ru/products/processor-intel-core-i7-12700kf-box-30064170",
+                "socket": "1700",
+                "cores": "12",
+                "frequency": "3600 МГц",
+                "turbo_frequency": "5000 МГц",
+                "heat": "190 Вт"
             }
         }
     },
     "5429": {
         "categoryName": "Видеокарты",
         "data": {
+            "400146515": {
+                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti EAGLE 8G",
+                "brand_name": "GIGABYTE",
+                "price": 49999,
+                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-eagle-8g-400146515",
+                "video_memory": "8 ГБ None",
+                "video_memory_type": "GDDR6",
+                "processor_frequency": "2535 МГц",
+                "memory_frequency": "18000 МГц",
+                "HDMI": "2",
+                "DP": "2",
+                "recommended_power": "500 Вт"
+            },
             "30065820": {
                 "name": "Видеокарта Zotac GeForce GTX 1650 OC 4GB GDDR6 128-bit Gaming",
                 "brand_name": "Zotac",
@@ -120,18 +121,44 @@
                 "DP": "1",
                 "recommended_power": "350 Вт"
             },
-            "30061173": {
-                "name": "Видеокарта MSI N730K-2GD3/LP",
-                "brand_name": "MSI",
-                "price": 5999,
-                "link": "https://www.mvideo.ru/products/videokarta-msi-n730k-2gd3-lp-30061173",
-                "video_memory": "2 ГБ None",
-                "video_memory_type": "DDR3",
-                "processor_frequency": "902 МГц",
-                "memory_frequency": "1600 МГц",
+            "400146627": {
+                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti AERO OC 8G",
+                "brand_name": "GIGABYTE",
+                "price": 55999,
+                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-aero-oc-8g-400146627",
+                "video_memory": "8 ГБ None",
+                "video_memory_type": "GDDR6",
+                "processor_frequency": "2580 МГц",
+                "memory_frequency": "18000 МГц",
+                "HDMI": "2",
+                "DP": "2",
+                "recommended_power": "500 Вт"
+            },
+            "400146443": {
+                "name": "Видеокарта Palit GeForce RTX 4060 Ti Dual OC 8GB",
+                "brand_name": "Palit",
+                "price": 52999,
+                "link": "https://www.mvideo.ru/products/videokarta-palit-geforce-rtx-4060-ti-dual-oc-8gb-400146443",
+                "video_memory": "8 ГБ None",
+                "video_memory_type": "GDDR6",
+                "processor_frequency": "2310 МГц",
+                "memory_frequency": "18000 МГц",
                 "HDMI": "1",
-                "DP": "-",
-                "recommended_power": "300 Вт"
+                "DP": "3",
+                "recommended_power": "650 Вт"
+            },
+            "400146495": {
+                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti GAMING OC 8G",
+                "brand_name": "GIGABYTE",
+                "price": 54999,
+                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-gaming-oc-8g-400146495",
+                "video_memory": "8 ГБ None",
+                "video_memory_type": "GDDR6",
+                "processor_frequency": "2580 МГц",
+                "memory_frequency": "18000 МГц",
+                "HDMI": "2",
+                "DP": "2",
+                "recommended_power": "500 Вт"
             },
             "30061284": {
                 "name": "Видеокарта MSI GT210 1GB GDDR3",
@@ -146,14 +173,14 @@
                 "DP": "-",
                 "recommended_power": "350 Вт"
             },
-            "30061285": {
-                "name": "Видеокарта MSI PCIE16 GT730 4GB DDR3",
+            "30061173": {
+                "name": "Видеокарта MSI N730K-2GD3/LP",
                 "brand_name": "MSI",
-                "price": 7799,
-                "link": "https://www.mvideo.ru/products/videokarta-msi-pcie16-gt730-4gb-ddr3-30061285",
-                "video_memory": "4 ГБ None",
+                "price": 5999,
+                "link": "https://www.mvideo.ru/products/videokarta-msi-n730k-2gd3-lp-30061173",
+                "video_memory": "2 ГБ None",
                 "video_memory_type": "DDR3",
-                "processor_frequency": "750 МГц",
+                "processor_frequency": "902 МГц",
                 "memory_frequency": "1600 МГц",
                 "HDMI": "1",
                 "DP": "-",
@@ -172,31 +199,31 @@
                 "DP": "3",
                 "recommended_power": "750 Вт"
             },
-            "30061961": {
-                "name": "Видеокарта Palit RTX3080 12GB LHR GamingPro",
-                "brand_name": "Palit",
-                "price": 111499,
-                "link": "https://www.mvideo.ru/products/videokarta-palit-rtx3080-12gb-lhr-gamingpro-30061961",
-                "video_memory": "12 ГБ None",
+            "30062435": {
+                "name": "Видеокарта MSI RTX 3070 Ti SUPRIM X 8G (912-V505-010)",
+                "brand_name": "MSI",
+                "price": 109999,
+                "link": "https://www.mvideo.ru/products/videokarta-msi-rtx-3070-ti-suprim-x-8g-912-v505-010-30062435",
+                "video_memory": "8 ГБ None",
                 "video_memory_type": "GDDR6X",
-                "processor_frequency": "1365 МГц",
+                "processor_frequency": "1875 МГц",
                 "memory_frequency": "19000 МГц",
                 "HDMI": "1",
                 "DP": "3",
-                "recommended_power": "750 Вт"
+                "recommended_power": "850 Вт"
             },
-            "30032095": {
-                "name": "Видеокарта MSI GeForce GT 730 2GB Silent LP",
-                "brand_name": "MSI",
-                "price": 5299,
-                "link": "https://www.mvideo.ru/products/videokarta-msi-geforce-gt-730-2gb-silent-lp-30032095",
-                "video_memory": "2 ГБ None",
-                "video_memory_type": "DDR3",
-                "processor_frequency": "902 МГц",
-                "memory_frequency": "1600 МГц",
-                "HDMI": "1",
-                "DP": "-",
-                "recommended_power": "300 Вт"
+            "30062467": {
+                "name": "Видеокарта GIGABYTE Radeon RX6600XT GAMING 8G(GV-R66XTGAMING OC-8GD)",
+                "brand_name": "GIGABYTE",
+                "price": 38299,
+                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-radeon-rx6600xt-gaming-8ggv-r66xtgaming-oc-8gd-30062467",
+                "video_memory": "8 ГБ None",
+                "video_memory_type": "GDDR6",
+                "processor_frequency": "2593 МГц",
+                "memory_frequency": "16000 МГц",
+                "HDMI": "2",
+                "DP": "2",
+                "recommended_power": "500 Вт"
             },
             "30065817": {
                 "name": "Видеокарта PNY GeForce RTX 3070 8GB Dual Fan",
@@ -237,32 +264,6 @@
                 "DP": "3",
                 "recommended_power": "750 Вт"
             },
-            "30057327": {
-                "name": "Видеокарта GIGABYTE Aorus GeForce RTX 3080 MASTER 10GB",
-                "brand_name": "GIGABYTE",
-                "price": 82999,
-                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-aorus-geforce-rtx-3080-master-10gb-30057327",
-                "video_memory": "10 ГБ None",
-                "video_memory_type": "GDDR6X",
-                "processor_frequency": "1845 МГц",
-                "memory_frequency": "19000 МГц",
-                "HDMI": "3",
-                "DP": "3",
-                "recommended_power": "750 Вт"
-            },
-            "30057805": {
-                "name": "Видеокарта Palit GeForce RTX 3080 Ti GamingPro 12G",
-                "brand_name": "Palit",
-                "price": 117999,
-                "link": "https://www.mvideo.ru/products/videokarta-palit-geforce-rtx-3080-ti-gamingpro-12g-30057805",
-                "video_memory": "12 ГБ None",
-                "video_memory_type": "GDDR6X",
-                "processor_frequency": "1665 МГц",
-                "memory_frequency": "19000 МГц",
-                "HDMI": "1",
-                "DP": "3",
-                "recommended_power": "750 Вт"
-            },
             "30057672": {
                 "name": "Видеокарта MSI GeForce RTX 3080 Gaming Z TRIO 10G",
                 "brand_name": "MSI",
@@ -276,84 +277,6 @@
                 "DP": "3",
                 "recommended_power": "750 Вт"
             },
-            "30062435": {
-                "name": "Видеокарта MSI RTX 3070 Ti SUPRIM X 8G (912-V505-010)",
-                "brand_name": "MSI",
-                "price": 109999,
-                "link": "https://www.mvideo.ru/products/videokarta-msi-rtx-3070-ti-suprim-x-8g-912-v505-010-30062435",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6X",
-                "processor_frequency": "1875 МГц",
-                "memory_frequency": "19000 МГц",
-                "HDMI": "1",
-                "DP": "3",
-                "recommended_power": "850 Вт"
-            },
-            "30062467": {
-                "name": "Видеокарта GIGABYTE Radeon RX6600XT GAMING 8G(GV-R66XTGAMING OC-8GD)",
-                "brand_name": "GIGABYTE",
-                "price": 38299,
-                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-radeon-rx6600xt-gaming-8ggv-r66xtgaming-oc-8gd-30062467",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "2593 МГц",
-                "memory_frequency": "16000 МГц",
-                "HDMI": "2",
-                "DP": "2",
-                "recommended_power": "500 Вт"
-            },
-            "30056549": {
-                "name": "Видеокарта Palit PA-RTX2060 Dual 6G",
-                "brand_name": "Palit",
-                "price": 52999,
-                "link": "https://www.mvideo.ru/products/videokarta-palit-pa-rtx2060-dual-6g-30056549",
-                "video_memory": "6 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "1365 МГц",
-                "memory_frequency": "14000 МГц",
-                "HDMI": "1",
-                "DP": "1",
-                "recommended_power": "500 Вт"
-            },
-            "400067498": {
-                "name": "Видеокарта Zotac GeForce RTX4070Ti AMP EXTREME AIRO 12GB",
-                "brand_name": "Zotac",
-                "price": 99999,
-                "link": "https://www.mvideo.ru/products/videokarta-zotac-geforce-rtx4070ti-amp-extreme-airo-12gb-400067498",
-                "video_memory": "12 ГБ None",
-                "video_memory_type": "GDDR6X",
-                "processor_frequency": "2310 МГц",
-                "memory_frequency": "21000 МГц",
-                "HDMI": "1",
-                "DP": "3",
-                "recommended_power": "600 Вт"
-            },
-            "400146495": {
-                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti GAMING OC 8G",
-                "brand_name": "GIGABYTE",
-                "price": 54999,
-                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-gaming-oc-8g-400146495",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "2580 МГц",
-                "memory_frequency": "18000 МГц",
-                "HDMI": "2",
-                "DP": "2",
-                "recommended_power": "500 Вт"
-            },
-            "400146443": {
-                "name": "Видеокарта Palit GeForce RTX 4060 Ti Dual OC 8GB",
-                "brand_name": "Palit",
-                "price": 52999,
-                "link": "https://www.mvideo.ru/products/videokarta-palit-geforce-rtx-4060-ti-dual-oc-8gb-400146443",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "2310 МГц",
-                "memory_frequency": "18000 МГц",
-                "HDMI": "1",
-                "DP": "3",
-                "recommended_power": "650 Вт"
-            },
             "400146433": {
                 "name": "Видеокарта Palit GeForce RTX 4060 Ti Dual 8GB",
                 "brand_name": "Palit",
@@ -366,32 +289,6 @@
                 "HDMI": "1",
                 "DP": "3",
                 "recommended_power": "650 Вт"
-            },
-            "400146515": {
-                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti EAGLE 8G",
-                "brand_name": "GIGABYTE",
-                "price": 49999,
-                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-eagle-8g-400146515",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "2535 МГц",
-                "memory_frequency": "18000 МГц",
-                "HDMI": "2",
-                "DP": "2",
-                "recommended_power": "500 Вт"
-            },
-            "400146627": {
-                "name": "Видеокарта GIGABYTE GeForce RTX 4060 Ti AERO OC 8G",
-                "brand_name": "GIGABYTE",
-                "price": 55999,
-                "link": "https://www.mvideo.ru/products/videokarta-gigabyte-geforce-rtx-4060-ti-aero-oc-8g-400146627",
-                "video_memory": "8 ГБ None",
-                "video_memory_type": "GDDR6",
-                "processor_frequency": "2580 МГц",
-                "memory_frequency": "18000 МГц",
-                "HDMI": "2",
-                "DP": "2",
-                "recommended_power": "500 Вт"
             }
         }
     },
@@ -419,6 +316,16 @@
                     "spin_speed": "5400 об/мин",
                     "buffer_memory": "16 МБ"
                 },
+                "400117718": {
+                    "name": "Внутренний HDD диск Seagate BarraCuda ST1000DM010 1TB",
+                    "brand_name": "Seagate",
+                    "price": 3790,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st1000dm010-1tb-400117718",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "7200 об/мин",
+                    "buffer_memory": "64 МБ"
+                },
                 "400118456": {
                     "name": "Внутренний HDD диск WD Blue WD10EZEX 1TB 3.5\"",
                     "brand_name": "WD",
@@ -429,15 +336,15 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "64 МБ"
                 },
-                "400117718": {
-                    "name": "Внутренний HDD диск Seagate BarraCuda ST1000DM010 1TB",
-                    "brand_name": "Seagate",
-                    "price": 3790,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st1000dm010-1tb-400117718",
-                    "hdd_memory": "1 ТБ",
+                "400146153": {
+                    "name": "Внутренний HDD диск Western Digital 2TB Blue WD20EZBX",
+                    "brand_name": "Western Digital",
+                    "price": 5090,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-western-digital-2tb-blue-wd20ezbx-400146153",
+                    "hdd_memory": "2 ТБ",
                     "form_factor": "3.5\"",
                     "spin_speed": "7200 об/мин",
-                    "buffer_memory": "64 МБ"
+                    "buffer_memory": "256 МБ"
                 },
                 "400118441": {
                     "name": "Внутренний HDD диск WD Scorpio WD10JUCT 1TB 2.5\"",
@@ -449,6 +356,16 @@
                     "spin_speed": "5400 об/мин",
                     "buffer_memory": "16 МБ"
                 },
+                "400118463": {
+                    "name": "Внутренний HDD диск WD Blue WD40EZAZ 4TB 3.5\"",
+                    "brand_name": "WD",
+                    "price": 7290,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-wd-blue-wd40ezaz-4tb-35-400118463",
+                    "hdd_memory": "4 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "5400 об/мин",
+                    "buffer_memory": "256 МБ"
+                },
                 "400118434": {
                     "name": "Внутренний HDD диск WD Blue WD10SPZX 1TB 2.5\"",
                     "brand_name": "WD",
@@ -458,16 +375,6 @@
                     "form_factor": "2.5\"",
                     "spin_speed": "5400 об/мин",
                     "buffer_memory": "128 МБ"
-                },
-                "400146153": {
-                    "name": "Внутренний HDD диск Western Digital 2TB Blue WD20EZBX",
-                    "brand_name": "Western Digital",
-                    "price": 5090,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-western-digital-2tb-blue-wd20ezbx-400146153",
-                    "hdd_memory": "2 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "7200 об/мин",
-                    "buffer_memory": "256 МБ"
                 },
                 "400118436": {
                     "name": "Внутренний HDD диск WD Blue WD20SPZX 2TB 2.5\"",
@@ -489,16 +396,6 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "64 МБ"
                 },
-                "400118463": {
-                    "name": "Внутренний HDD диск WD Blue WD40EZAZ 4TB 3.5\"",
-                    "brand_name": "WD",
-                    "price": 7290,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-wd-blue-wd40ezaz-4tb-35-400118463",
-                    "hdd_memory": "4 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "5400 об/мин",
-                    "buffer_memory": "256 МБ"
-                },
                 "400118439": {
                     "name": "Внутренний HDD диск WD Purple WD30PURZ 3TB 3.5\"",
                     "brand_name": "WD",
@@ -508,36 +405,6 @@
                     "form_factor": "3.5\"",
                     "spin_speed": "5400 об/мин",
                     "buffer_memory": "64 МБ"
-                },
-                "400117743": {
-                    "name": "Внутренний HDD диск Seagate SkyHawk ST1000VX005 1TB",
-                    "brand_name": "Seagate",
-                    "price": 4190,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-skyhawk-st1000vx005-1tb-400117743",
-                    "hdd_memory": "1 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "5900 об/мин",
-                    "buffer_memory": "64 МБ"
-                },
-                "400118452": {
-                    "name": "Внутренний HDD диск Seagate Exos 7E8 ST8000NM001A 8TB 3.5\"",
-                    "brand_name": "Seagate",
-                    "price": 19190,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-exos-7e8-st8000nm001a-8tb-35-400118452",
-                    "hdd_memory": "8 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "7200 об/мин",
-                    "buffer_memory": "256 МБ"
-                },
-                "400118455": {
-                    "name": "Внутренний HDD диск WD Purple WD42PURZ 4TB 3.5\"",
-                    "brand_name": "WD",
-                    "price": 8090,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-wd-purple-wd42purz-4tb-35-400118455",
-                    "hdd_memory": "4 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "5400 об/мин",
-                    "buffer_memory": "256 МБ"
                 },
                 "400118451": {
                     "name": "Внутренний HDD диск WD Red Pro WD6003FFBX 6TB 3.5\"",
@@ -549,16 +416,6 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "256 МБ"
                 },
-                "400117744": {
-                    "name": "Внутренний HDD диск Seagate BarraCuda ST2000LM015 2TB",
-                    "brand_name": "Seagate",
-                    "price": 5690,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st2000lm015-2tb-400117744",
-                    "hdd_memory": "2 ТБ",
-                    "form_factor": "2.5\"",
-                    "spin_speed": "5400 об/мин",
-                    "buffer_memory": "128 МБ"
-                },
                 "400032956": {
                     "name": "Внутренний HDD диск OS 8TB ST8000DM009",
                     "brand_name": "OS",
@@ -568,6 +425,26 @@
                     "form_factor": "3.5\"",
                     "spin_speed": "5400 об/мин",
                     "buffer_memory": "256 МБ"
+                },
+                "400117743": {
+                    "name": "Внутренний HDD диск Seagate SkyHawk ST1000VX005 1TB",
+                    "brand_name": "Seagate",
+                    "price": 4190,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-skyhawk-st1000vx005-1tb-400117743",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "5900 об/мин",
+                    "buffer_memory": "64 МБ"
+                },
+                "400117744": {
+                    "name": "Внутренний HDD диск Seagate BarraCuda ST2000LM015 2TB",
+                    "brand_name": "Seagate",
+                    "price": 5690,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st2000lm015-2tb-400117744",
+                    "hdd_memory": "2 ТБ",
+                    "form_factor": "2.5\"",
+                    "spin_speed": "5400 об/мин",
+                    "buffer_memory": "128 МБ"
                 },
                 "400118460": {
                     "name": "Внутренний HDD диск Seagate IronWolf Pro ST8000NE001 для NAS 8TB 3.5''",
@@ -609,6 +486,16 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "64 МБ"
                 },
+                "400118452": {
+                    "name": "Внутренний HDD диск Seagate Exos 7E8 ST8000NM001A 8TB 3.5\"",
+                    "brand_name": "Seagate",
+                    "price": 19190,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-exos-7e8-st8000nm001a-8tb-35-400118452",
+                    "hdd_memory": "8 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "7200 об/мин",
+                    "buffer_memory": "256 МБ"
+                },
                 "400118454": {
                     "name": "Внутренний HDD диск WD Purple WD63PURZ 6TB 3.5\"",
                     "brand_name": "WD",
@@ -618,6 +505,36 @@
                     "form_factor": "3.5\"",
                     "spin_speed": "5640 об/мин",
                     "buffer_memory": "256 МБ"
+                },
+                "400032818": {
+                    "name": "Внутренний HDD диск OS 2TB ST2000NM0016",
+                    "brand_name": "OS",
+                    "price": 5990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-os-2tb-st2000nm0016-400032818",
+                    "hdd_memory": "2 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "7200 об/мин",
+                    "buffer_memory": "256 МБ"
+                },
+                "400117730": {
+                    "name": "Внутренний HDD диск Seagate Exos 7E2000 ST1000NX0333 1TB",
+                    "brand_name": "Seagate",
+                    "price": 13190,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-exos-7e2000-st1000nx0333-1tb-400117730",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "2.5\"",
+                    "spin_speed": "7200 об/мин",
+                    "buffer_memory": "128 МБ"
+                },
+                "400117738": {
+                    "name": "Внутренний HDD диск Seagate BarraCuda ST1000LM049 1TB",
+                    "brand_name": "Seagate",
+                    "price": 5690,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st1000lm049-1tb-400117738",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "2.5\"",
+                    "spin_speed": "7200 об/мин",
+                    "buffer_memory": "128 МБ"
                 },
                 "400117719": {
                     "name": "Внутренний HDD диск Seagate Exos 10E2400 ST1800MM0129 1.8TB",
@@ -659,26 +576,6 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "256 МБ"
                 },
-                "400117730": {
-                    "name": "Внутренний HDD диск Seagate Exos 7E2000 ST1000NX0333 1TB",
-                    "brand_name": "Seagate",
-                    "price": 13190,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-exos-7e2000-st1000nx0333-1tb-400117730",
-                    "hdd_memory": "1 ТБ",
-                    "form_factor": "2.5\"",
-                    "spin_speed": "7200 об/мин",
-                    "buffer_memory": "128 МБ"
-                },
-                "400117738": {
-                    "name": "Внутренний HDD диск Seagate BarraCuda ST1000LM049 1TB",
-                    "brand_name": "Seagate",
-                    "price": 5690,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-barracuda-st1000lm049-1tb-400117738",
-                    "hdd_memory": "1 ТБ",
-                    "form_factor": "2.5\"",
-                    "spin_speed": "7200 об/мин",
-                    "buffer_memory": "128 МБ"
-                },
                 "400117729": {
                     "name": "Внутренний HDD диск Toshiba Жесткий диск TOSHIBA Enterprise Capacity MG04ACA1",
                     "brand_name": "Toshiba",
@@ -688,36 +585,6 @@
                     "form_factor": "3.5\"",
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "128 МБ"
-                },
-                "400032818": {
-                    "name": "Внутренний HDD диск OS 2TB ST2000NM0016",
-                    "brand_name": "OS",
-                    "price": 5990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-os-2tb-st2000nm0016-400032818",
-                    "hdd_memory": "2 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "7200 об/мин",
-                    "buffer_memory": "256 МБ"
-                },
-                "400047977": {
-                    "name": "Внутренний HDD диск Seagate Skyhawk ST1000VX005 1ТБ",
-                    "brand_name": "Seagate",
-                    "price": 4990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-skyhawk-st1000vx005-1tb-400047977",
-                    "hdd_memory": "1 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "5900 об/мин",
-                    "buffer_memory": "64 МБ"
-                },
-                "400047969": {
-                    "name": "Внутренний HDD диск WD Purple WD10EJRX 1ТБ",
-                    "brand_name": "WD",
-                    "price": 4990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-wd-purple-wd10ejrx-1tb-400047969",
-                    "hdd_memory": "1 ТБ",
-                    "form_factor": "3.5\"",
-                    "spin_speed": "5400 об/мин",
-                    "buffer_memory": "64 МБ"
                 },
                 "400146157": {
                     "name": "Внутренний HDD диск Western Digital 4TB Purple WD40PURZ",
@@ -779,15 +646,35 @@
                     "spin_speed": "5900 об/мин",
                     "buffer_memory": "256 МБ"
                 },
-                "400033016": {
-                    "name": "Внутренний HDD диск OS 10TB ST10000DM0004",
-                    "brand_name": "OS",
-                    "price": 22990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-os-10tb-st10000dm0004-400033016",
-                    "hdd_memory": "10 ТБ",
+                "400036365": {
+                    "name": "Внутренний HDD диск Seagate 16Tb Skyhawk ST16000VЕ002",
+                    "brand_name": "Seagate",
+                    "price": 43990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-16tb-skyhawk-st16000ve002-400036365",
+                    "hdd_memory": "16 ТБ",
                     "form_factor": "3.5\"",
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "256 МБ"
+                },
+                "400047977": {
+                    "name": "Внутренний HDD диск Seagate Skyhawk ST1000VX005 1ТБ",
+                    "brand_name": "Seagate",
+                    "price": 4990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-skyhawk-st1000vx005-1tb-400047977",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "5900 об/мин",
+                    "buffer_memory": "64 МБ"
+                },
+                "400047969": {
+                    "name": "Внутренний HDD диск WD Purple WD10EJRX 1ТБ",
+                    "brand_name": "WD",
+                    "price": 4990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-wd-purple-wd10ejrx-1tb-400047969",
+                    "hdd_memory": "1 ТБ",
+                    "form_factor": "3.5\"",
+                    "spin_speed": "5400 об/мин",
+                    "buffer_memory": "64 МБ"
                 },
                 "400035704": {
                     "name": "Внутренний HDD диск OS ST10000NM0166",
@@ -809,30 +696,18 @@
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "256 МБ"
                 },
-                "400036365": {
-                    "name": "Внутренний HDD диск Seagate 16Tb Skyhawk ST16000VЕ002",
-                    "brand_name": "Seagate",
-                    "price": 43990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-seagate-16tb-skyhawk-st16000ve002-400036365",
-                    "hdd_memory": "16 ТБ",
+                "400033016": {
+                    "name": "Внутренний HDD диск OS 10TB ST10000DM0004",
+                    "brand_name": "OS",
+                    "price": 22990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-hdd-disk-os-10tb-st10000dm0004-400033016",
+                    "hdd_memory": "10 ТБ",
                     "form_factor": "3.5\"",
                     "spin_speed": "7200 об/мин",
                     "buffer_memory": "256 МБ"
                 }
             },
             "SSD_m2": {
-                "30065222": {
-                    "name": "Внутренний SSD накопитель Samsung 250GB 970 EVO Plus NVMe M.2 (MZ-V7S250BW)",
-                    "brand_name": "Samsung",
-                    "price": 3999,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-samsung-250gb-970-evo-plus-nvme-m2-mz-v7s250bw-30065222",
-                    "ssd_memory": "250GB",
-                    "form_factor": "M.2 Type 2280 M key",
-                    "connection_interface": "M.2 PCI-Express x 4",
-                    "flash_memory_type": "V-NAND",
-                    "max_read_speed": "3500 МБ/сек",
-                    "max_write_speed": "2300 МБ/сек"
-                },
                 "30065226": {
                     "name": "Внутренний SSD накопитель Samsung 250GB 980 NVMe M.2 (MZ-V8V250BW)",
                     "brand_name": "Samsung",
@@ -845,29 +720,17 @@
                     "max_read_speed": "2900 МБ/сек",
                     "max_write_speed": "1300 МБ/сек"
                 },
-                "30056145": {
-                    "name": "Внутренний SSD накопитель Hikvision 128GB E100N (HS-SSD-E100N/128G)",
-                    "brand_name": "Hikvision",
-                    "price": 949,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-128gb-e100n-hs-ssd-e100n-128g-30056145",
-                    "ssd_memory": "128GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "M.2 SATA",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "530 МБ/сек",
-                    "max_write_speed": "450 МБ/сек"
-                },
-                "30056148": {
-                    "name": "Внутренний SSD накопитель Hikvision 256GB E1000 (HS-SSD-E1000/256G)",
-                    "brand_name": "Hikvision",
-                    "price": 1949,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-256gb-e1000-hs-ssd-e1000-256g-30056148",
-                    "ssd_memory": "256GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI-Express 3.0 x 4",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "1950 МБ/сек",
-                    "max_write_speed": "1260 МБ/сек"
+                "30065222": {
+                    "name": "Внутренний SSD накопитель Samsung 250GB 970 EVO Plus NVMe M.2 (MZ-V7S250BW)",
+                    "brand_name": "Samsung",
+                    "price": 3999,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-samsung-250gb-970-evo-plus-nvme-m2-mz-v7s250bw-30065222",
+                    "ssd_memory": "250GB",
+                    "form_factor": "M.2 Type 2280 M key",
+                    "connection_interface": "M.2 PCI-Express x 4",
+                    "flash_memory_type": "V-NAND",
+                    "max_read_speed": "3500 МБ/сек",
+                    "max_write_speed": "2300 МБ/сек"
                 },
                 "30065224": {
                     "name": "Внутренний SSD накопитель Samsung 500Gb 980 PRO NVMe M.2 (MZ-V8P500BW)",
@@ -893,29 +756,29 @@
                     "max_read_speed": "500 МБ/сек",
                     "max_write_speed": "320 МБ/сек"
                 },
-                "30056149": {
-                    "name": "Внутренний SSD накопитель Hikvision 512GB E1000 (HS-SSD-E1000/512G)",
+                "30056145": {
+                    "name": "Внутренний SSD накопитель Hikvision 128GB E100N (HS-SSD-E100N/128G)",
                     "brand_name": "Hikvision",
-                    "price": 3199,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-512gb-e1000-hs-ssd-e1000-512g-30056149",
-                    "ssd_memory": "512GB",
+                    "price": 949,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-128gb-e100n-hs-ssd-e100n-128g-30056145",
+                    "ssd_memory": "128GB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "M.2 SATA",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "530 МБ/сек",
+                    "max_write_speed": "450 МБ/сек"
+                },
+                "30056148": {
+                    "name": "Внутренний SSD накопитель Hikvision 256GB E1000 (HS-SSD-E1000/256G)",
+                    "brand_name": "Hikvision",
+                    "price": 1949,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-256gb-e1000-hs-ssd-e1000-256g-30056148",
+                    "ssd_memory": "256GB",
                     "form_factor": "M.2 Type 2280",
                     "connection_interface": "PCI-Express 3.0 x 4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "2000 МБ/сек",
-                    "max_write_speed": "1610 МБ/сек"
-                },
-                "30065220": {
-                    "name": "Внутренний SSD накопитель Samsung 500GB 860 EVO SATA M.2 (MZ-N6E500BW)",
-                    "brand_name": "Samsung",
-                    "price": 4599,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-samsung-500gb-860-evo-sata-m2-mz-n6e500bw-30065220",
-                    "ssd_memory": "500GB",
-                    "form_factor": "M.2 Type 2280 B&M Key",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC V-NAND",
-                    "max_read_speed": "550 МБ/сек",
-                    "max_write_speed": "520 МБ/сек"
+                    "max_read_speed": "1950 МБ/сек",
+                    "max_write_speed": "1260 МБ/сек"
                 },
                 "30053489": {
                     "name": "Внутренний SSD накопитель Silicon Power 256GB A55 (SP256GBSS3A55M28)",
@@ -941,17 +804,17 @@
                     "max_read_speed": "550 МБ/сек",
                     "max_write_speed": "520 МБ/сек"
                 },
-                "30056147": {
-                    "name": "Внутренний SSD накопитель Hikvision 128GB E1000 (HS-SSD-E1000/128G)",
+                "30056149": {
+                    "name": "Внутренний SSD накопитель Hikvision 512GB E1000 (HS-SSD-E1000/512G)",
                     "brand_name": "Hikvision",
-                    "price": 1199,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-128gb-e1000-hs-ssd-e1000-128g-30056147",
-                    "ssd_memory": "128GB",
+                    "price": 3199,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-512gb-e1000-hs-ssd-e1000-512g-30056149",
+                    "ssd_memory": "512GB",
                     "form_factor": "M.2 Type 2280",
                     "connection_interface": "PCI-Express 3.0 x 4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "990 МБ/сек",
-                    "max_write_speed": "650 МБ/сек"
+                    "max_read_speed": "2000 МБ/сек",
+                    "max_write_speed": "1610 МБ/сек"
                 },
                 "30053487": {
                     "name": "Внутренний SSD накопитель Silicon Power 480GB M55 (SP480GBSS3M55M28)",
@@ -965,17 +828,29 @@
                     "max_read_speed": "560 МБ/сек",
                     "max_write_speed": "530 МБ/сек"
                 },
-                "30056114": {
-                    "name": "Внутренний SSD накопитель Netac 128GB N535N (NT01N535N-128G-N8X)",
-                    "brand_name": "Netac",
-                    "price": 999,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-netac-128gb-n535n-nt01n535n-128g-n8x-30056114",
+                "30065220": {
+                    "name": "Внутренний SSD накопитель Samsung 500GB 860 EVO SATA M.2 (MZ-N6E500BW)",
+                    "brand_name": "Samsung",
+                    "price": 4599,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-samsung-500gb-860-evo-sata-m2-mz-n6e500bw-30065220",
+                    "ssd_memory": "500GB",
+                    "form_factor": "M.2 Type 2280 B&M Key",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC V-NAND",
+                    "max_read_speed": "550 МБ/сек",
+                    "max_write_speed": "520 МБ/сек"
+                },
+                "30056147": {
+                    "name": "Внутренний SSD накопитель Hikvision 128GB E1000 (HS-SSD-E1000/128G)",
+                    "brand_name": "Hikvision",
+                    "price": 1199,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-128gb-e1000-hs-ssd-e1000-128g-30056147",
                     "ssd_memory": "128GB",
                     "form_factor": "M.2 Type 2280",
-                    "connection_interface": "SATA III",
+                    "connection_interface": "PCI-Express 3.0 x 4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "510 МБ/сек",
-                    "max_write_speed": "440 МБ/сек"
+                    "max_read_speed": "990 МБ/сек",
+                    "max_write_speed": "650 МБ/сек"
                 },
                 "30064280": {
                     "name": "Внутренний SSD накопитель Hikvision 1TB E100N (HS-SSD-E100N/1024G)",
@@ -989,6 +864,18 @@
                     "max_read_speed": "555 МБ/сек",
                     "max_write_speed": "513 МБ/сек"
                 },
+                "30056114": {
+                    "name": "Внутренний SSD накопитель Netac 128GB N535N (NT01N535N-128G-N8X)",
+                    "brand_name": "Netac",
+                    "price": 999,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-netac-128gb-n535n-nt01n535n-128g-n8x-30056114",
+                    "ssd_memory": "128GB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "510 МБ/сек",
+                    "max_write_speed": "440 МБ/сек"
+                },
                 "30064281": {
                     "name": "Внутренний SSD накопитель Hikvision 2TB E2000 (HS-SSD-E2000/2048G)",
                     "brand_name": "Hikvision",
@@ -1000,114 +887,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "3500 МБ/сек",
                     "max_write_speed": "2750 МБ/сек"
-                },
-                "30036958": {
-                    "name": "Внутренний SSD накопитель Transcend 120GB (TS120GMTS820S)",
-                    "brand_name": "Transcend",
-                    "price": 1099,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-transcend-120gb-ts120gmts820s-30036958",
-                    "ssd_memory": "120GB",
-                    "form_factor": "M.2 Type 2280 B&M Key",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC",
-                    "max_read_speed": "560 МБ/сек",
-                    "max_write_speed": "510 МБ/сек"
-                },
-                "30055080": {
-                    "name": "Внутренний SSD накопитель Silicon Power 128GB P34A60 (SP128GBP34A60M28)",
-                    "brand_name": "Silicon Power",
-                    "price": 1399,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-silicon-power-128gb-p34a60-sp128gbp34a60m28-30055080",
-                    "ssd_memory": "128GB",
-                    "form_factor": "M.2 Type 2280 M key",
-                    "connection_interface": "M.2 PCI-Express x 4",
-                    "flash_memory_type": "3D NAND",
-                    "max_read_speed": "2200 МБ/сек",
-                    "max_write_speed": "1600 МБ/сек"
-                },
-                "30053486": {
-                    "name": "Внутренний SSD накопитель Silicon Power 240GB M55 (SP240GBSS3M55M28)",
-                    "brand_name": "Silicon Power",
-                    "price": 2499,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-silicon-power-240gb-m55-sp240gbss3m55m28-30053486",
-                    "ssd_memory": "240GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "560 МБ/сек",
-                    "max_write_speed": "530 МБ/сек"
-                },
-                "30053432": {
-                    "name": "Внутренний SSD накопитель Apacer 256GB AS2280P4 (AP256GAS2280P4-1)",
-                    "brand_name": "Apacer",
-                    "price": 4299,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-apacer-256gb-as2280p4-ap256gas2280p4-1-30053432",
-                    "ssd_memory": "256GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI-Express 3.0 x 4",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "1800 МБ/сек",
-                    "max_write_speed": "1100 МБ/сек"
-                },
-                "30056146": {
-                    "name": "Внутренний SSD накопитель Hikvision 256GB E100N (HS-SSD-E100N/256G)",
-                    "brand_name": "Hikvision",
-                    "price": 2499,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-256gb-e100n-hs-ssd-e100n-256g-30056146",
-                    "ssd_memory": "256GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "M.2 SATA",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "545 МБ/сек",
-                    "max_write_speed": "480 МБ/сек"
-                },
-                "30056119": {
-                    "name": "Внутренний SSD накопитель Netac 128GB N930ES (NT01N930ES-128G-E2X)",
-                    "brand_name": "Netac",
-                    "price": 1699,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-netac-128gb-n930es-nt01n930es-128g-e2x-30056119",
-                    "ssd_memory": "128GB",
-                    "form_factor": "M.2",
-                    "connection_interface": "PCI-Express 2x",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "1650 МБ/сек",
-                    "max_write_speed": "635 МБ/сек"
-                },
-                "30055882": {
-                    "name": "Внутренний SSD накопитель ADATA 1TB XPG SX8100 (ASX8100NP-1TT-C)",
-                    "brand_name": "ADATA",
-                    "price": 11899,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-adata-1tb-xpg-sx8100-asx8100np-1tt-c-30055882",
-                    "ssd_memory": "1TB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "M.2 PCI-Express x 4",
-                    "flash_memory_type": "3D V-NAND",
-                    "max_read_speed": "3500 МБ/сек",
-                    "max_write_speed": "3000 МБ/сек"
-                },
-                "30062532": {
-                    "name": "Внутренний SSD накопитель Hikvision 512GB E100N (HS-SSD-E100N/512G)",
-                    "brand_name": "Hikvision",
-                    "price": 3499,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-512gb-e100n-hs-ssd-e100n-512g-30062532",
-                    "ssd_memory": "512GB",
-                    "form_factor": "M.2 Type 2280 B&M Key",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "545 МБ/сек",
-                    "max_write_speed": "480 МБ/сек"
-                },
-                "30053038": {
-                    "name": "Внутренний SSD накопитель ADATA 120GB Ultimate SU650 (ASU650NS38-120GT-C)",
-                    "brand_name": "ADATA",
-                    "price": 1699,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-adata-120gb-ultimate-su650-asu650ns38-120gt-c-30053038",
-                    "ssd_memory": "120GB",
-                    "form_factor": "M.2 Type 2280 B&M Key",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "550 МБ/сек",
-                    "max_write_speed": "410 МБ/сек"
                 },
                 "30054250": {
                     "name": "Внутренний SSD накопитель GIGABYTE 512GB NVMe M.2 2280 (GP-GSM2NE3512GNTD)",
@@ -1133,17 +912,65 @@
                     "max_read_speed": "5000 МБ/сек",
                     "max_write_speed": "4400 МБ/сек"
                 },
-                "30053364": {
-                    "name": "Внутренний SSD накопитель ADATA 1TB SX6000 Lite (ASX6000LNP-1TT-C)",
-                    "brand_name": "ADATA",
-                    "price": 4899,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-adata-1tb-sx6000-lite-asx6000lnp-1tt-c-30053364",
-                    "ssd_memory": "1TB",
+                "30053486": {
+                    "name": "Внутренний SSD накопитель Silicon Power 240GB M55 (SP240GBSS3M55M28)",
+                    "brand_name": "Silicon Power",
+                    "price": 2499,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-silicon-power-240gb-m55-sp240gbss3m55m28-30053486",
+                    "ssd_memory": "240GB",
                     "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI-Express x4",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "560 МБ/сек",
+                    "max_write_speed": "530 МБ/сек"
+                },
+                "30053432": {
+                    "name": "Внутренний SSD накопитель Apacer 256GB AS2280P4 (AP256GAS2280P4-1)",
+                    "brand_name": "Apacer",
+                    "price": 4299,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-apacer-256gb-as2280p4-ap256gas2280p4-1-30053432",
+                    "ssd_memory": "256GB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "PCI-Express 3.0 x 4",
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "1800 МБ/сек",
-                    "max_write_speed": "1200 МБ/сек"
+                    "max_write_speed": "1100 МБ/сек"
+                },
+                "30053038": {
+                    "name": "Внутренний SSD накопитель ADATA 120GB Ultimate SU650 (ASU650NS38-120GT-C)",
+                    "brand_name": "ADATA",
+                    "price": 1699,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-adata-120gb-ultimate-su650-asu650ns38-120gt-c-30053038",
+                    "ssd_memory": "120GB",
+                    "form_factor": "M.2 Type 2280 B&M Key",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "550 МБ/сек",
+                    "max_write_speed": "410 МБ/сек"
+                },
+                "30062532": {
+                    "name": "Внутренний SSD накопитель Hikvision 512GB E100N (HS-SSD-E100N/512G)",
+                    "brand_name": "Hikvision",
+                    "price": 3499,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-512gb-e100n-hs-ssd-e100n-512g-30062532",
+                    "ssd_memory": "512GB",
+                    "form_factor": "M.2 Type 2280 B&M Key",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "545 МБ/сек",
+                    "max_write_speed": "480 МБ/сек"
+                },
+                "30056146": {
+                    "name": "Внутренний SSD накопитель Hikvision 256GB E100N (HS-SSD-E100N/256G)",
+                    "brand_name": "Hikvision",
+                    "price": 2499,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-256gb-e100n-hs-ssd-e100n-256g-30056146",
+                    "ssd_memory": "256GB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "M.2 SATA",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "545 МБ/сек",
+                    "max_write_speed": "480 МБ/сек"
                 },
                 "30053433": {
                     "name": "Внутренний SSD накопитель Apacer 512GB AS2280P4 (AP512GAS2280P4-1)",
@@ -1156,6 +983,18 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "2100 МБ/сек",
                     "max_write_speed": "1500 МБ/сек"
+                },
+                "30053364": {
+                    "name": "Внутренний SSD накопитель ADATA 1TB SX6000 Lite (ASX6000LNP-1TT-C)",
+                    "brand_name": "ADATA",
+                    "price": 4899,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-adata-1tb-sx6000-lite-asx6000lnp-1tt-c-30053364",
+                    "ssd_memory": "1TB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "PCI-Express x4",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "1800 МБ/сек",
+                    "max_write_speed": "1200 МБ/сек"
                 },
                 "30053488": {
                     "name": "Внутренний SSD накопитель Silicon Power 128GB A55 (SP128GBSS3A55M28)",
@@ -1180,18 +1019,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "3300 МБ/сек",
                     "max_write_speed": "2100 МБ/сек"
-                },
-                "30056150": {
-                    "name": "Внутренний SSD накопитель Hikvision 1TB E1000 (HS-SSD-E1000/1024G)",
-                    "brand_name": "Hikvision",
-                    "price": 5299,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hikvision-1tb-e1000-hs-ssd-e1000-1024g-30056150",
-                    "ssd_memory": "1TB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI-Express 3.0 x 4",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "2100 МБ/сек",
-                    "max_write_speed": "1800 МБ/сек"
                 },
                 "30053383": {
                     "name": "Внутренний SSD накопитель ADATA 512GB Falcon (AFALCON-512G-C)",
@@ -1240,30 +1067,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "3100 МБ/сек",
                     "max_write_speed": "1300 МБ/сек"
-                },
-                "30046093": {
-                    "name": "Внутренний SSD накопитель HP 512GB EX950 M.2 (5MS22AA)",
-                    "brand_name": "HP",
-                    "price": 5599,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hp-512gb-ex950-m2-5ms22aa-30046093",
-                    "ssd_memory": "512GB",
-                    "form_factor": "M.2 Type 2280 M key",
-                    "connection_interface": "-",
-                    "flash_memory_type": "3D TLC",
-                    "max_read_speed": "3500 МБ/сек",
-                    "max_write_speed": "2250 МБ/сек"
-                },
-                "30052764": {
-                    "name": "Жесткий диск SSD Transcend 512GB 830S (TS512GMTS830S)",
-                    "brand_name": "Transcend",
-                    "price": 4299,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-transcend-512gb-830s-ts512gmts830s-30052764",
-                    "ssd_memory": "512GB",
-                    "form_factor": "M.2 Type 2280 B&M Key",
-                    "connection_interface": "SATA 6 Gb/s",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "560 МБ/сек",
-                    "max_write_speed": "520 МБ/сек"
                 },
                 "30052729": {
                     "name": "Жесткий диск SSD Transcend 1TB 110S (TS1TMTE110S)",
@@ -1325,6 +1128,18 @@
                     "max_read_speed": "520 МБ/сек",
                     "max_write_speed": "495 МБ/сек"
                 },
+                "30052764": {
+                    "name": "Жесткий диск SSD Transcend 512GB 830S (TS512GMTS830S)",
+                    "brand_name": "Transcend",
+                    "price": 4299,
+                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-transcend-512gb-830s-ts512gmts830s-30052764",
+                    "ssd_memory": "512GB",
+                    "form_factor": "M.2 Type 2280 B&M Key",
+                    "connection_interface": "SATA 6 Gb/s",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "560 МБ/сек",
+                    "max_write_speed": "520 МБ/сек"
+                },
                 "30052762": {
                     "name": "Жесткий диск SSD Transcend 128GB 830S (TS128GMTS830S)",
                     "brand_name": "Transcend",
@@ -1336,18 +1151,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "560 МБ/сек",
                     "max_write_speed": "520 МБ/сек"
-                },
-                "400037272": {
-                    "name": "Жесткий диск SSD Smartbuy Jolt SM63X 128GB SBSSD-128GT-SM63XT-M2P4",
-                    "brand_name": "Smartbuy",
-                    "price": 1150,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-jolt-sm63x-128gb-sbssd-128gt-sm63xt-m2p4-400037272",
-                    "ssd_memory": "128GB",
-                    "form_factor": "M.2",
-                    "connection_interface": "PCI Express 3.0 x4",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "1800 МБ/сек",
-                    "max_write_speed": "550 МБ/сек"
                 },
                 "400121815": {
                     "name": "Жесткий диск SSD Samsung 990 Pro 2Tb (MZ-V9P2T0BW)",
@@ -1361,17 +1164,17 @@
                     "max_read_speed": "7450 МБ/сек",
                     "max_write_speed": "6900 МБ/сек"
                 },
-                "400021970": {
-                    "name": "Внутренний диск SSD Samsung 1TB 980 NVMe M.2 (MZ-V8V1T0BW)",
-                    "brand_name": "Samsung",
-                    "price": 10990,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-disk-ssd-samsung-1tb-980-nvme-m2-mz-v8v1t0bw-400021970",
-                    "ssd_memory": "1TB",
-                    "form_factor": "M.2 Type 2280 M key",
-                    "connection_interface": "M.2 PCI-Express x 4",
+                "400037272": {
+                    "name": "Жесткий диск SSD Smartbuy Jolt SM63X 128GB SBSSD-128GT-SM63XT-M2P4",
+                    "brand_name": "Smartbuy",
+                    "price": 1150,
+                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-jolt-sm63x-128gb-sbssd-128gt-sm63xt-m2p4-400037272",
+                    "ssd_memory": "128GB",
+                    "form_factor": "M.2",
+                    "connection_interface": "PCI Express 3.0 x4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "3500 МБ/сек",
-                    "max_write_speed": "3000 МБ/сек"
+                    "max_read_speed": "1800 МБ/сек",
+                    "max_write_speed": "550 МБ/сек"
                 },
                 "400021955": {
                     "name": "Внутренний диск SSD Samsung M.2 970 Evo Plus 1Tb (MZ-V7S1T0BW)",
@@ -1385,17 +1188,17 @@
                     "max_read_speed": "3500 МБ/сек",
                     "max_write_speed": "3300 МБ/сек"
                 },
-                "400054343": {
-                    "name": "Жесткий диск SSD Smartbuy Stream E13T Pro 128GB",
-                    "brand_name": "Smartbuy",
-                    "price": 1290,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-stream-e13t-pro-128gb-400054343",
-                    "ssd_memory": "128GB",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI Express 3.0 x4",
+                "400021970": {
+                    "name": "Внутренний диск SSD Samsung 1TB 980 NVMe M.2 (MZ-V8V1T0BW)",
+                    "brand_name": "Samsung",
+                    "price": 10990,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-disk-ssd-samsung-1tb-980-nvme-m2-mz-v8v1t0bw-400021970",
+                    "ssd_memory": "1TB",
+                    "form_factor": "M.2 Type 2280 M key",
+                    "connection_interface": "M.2 PCI-Express x 4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "2200 МБ/сек",
-                    "max_write_speed": "600 МБ/сек"
+                    "max_read_speed": "3500 МБ/сек",
+                    "max_write_speed": "3000 МБ/сек"
                 },
                 "400020246": {
                     "name": "Жесткий диск SSD KIMTIGO KTG-320 128GB M.2",
@@ -1421,17 +1224,17 @@
                     "max_read_speed": "3500 МБ/сек",
                     "max_write_speed": "3300 МБ/сек"
                 },
-                "400020256": {
-                    "name": "Внутренний диск SSD KIMTIGO KTA-320 256GB M.2",
-                    "brand_name": "KIMTIGO",
-                    "price": 3490,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-disk-ssd-kimtigo-kta-320-256gb-m2-400020256",
-                    "ssd_memory": "256GB",
-                    "form_factor": "M.2",
-                    "connection_interface": "M.2 SATA",
+                "400054343": {
+                    "name": "Жесткий диск SSD Smartbuy Stream E13T Pro 128GB",
+                    "brand_name": "Smartbuy",
+                    "price": 1290,
+                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-stream-e13t-pro-128gb-400054343",
+                    "ssd_memory": "128GB",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "PCI Express 3.0 x4",
                     "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "500 МБ/сек",
-                    "max_write_speed": "520 МБ/сек"
+                    "max_read_speed": "2200 МБ/сек",
+                    "max_write_speed": "600 МБ/сек"
                 },
                 "400042521": {
                     "name": "Жесткий диск SSD WD Black SN750 SE 1Tb (WDS100T1B0E)",
@@ -1445,6 +1248,30 @@
                     "max_read_speed": "3600 МБ/сек",
                     "max_write_speed": "2830 МБ/сек"
                 },
+                "400020256": {
+                    "name": "Внутренний диск SSD KIMTIGO KTA-320 256GB M.2",
+                    "brand_name": "KIMTIGO",
+                    "price": 3490,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-disk-ssd-kimtigo-kta-320-256gb-m2-400020256",
+                    "ssd_memory": "256GB",
+                    "form_factor": "M.2",
+                    "connection_interface": "M.2 SATA",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "500 МБ/сек",
+                    "max_write_speed": "520 МБ/сек"
+                },
+                "400121814": {
+                    "name": "Жесткий диск SSD Samsung 990 Pro 1Tb (MZ-V9P1T0BW)",
+                    "brand_name": "Samsung",
+                    "price": 16790,
+                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-samsung-990-pro-1tb-mz-v9p1t0bw-400121814",
+                    "ssd_memory": "1Tb",
+                    "form_factor": "M.2 Type 2280",
+                    "connection_interface": "PCI Express 4.0",
+                    "flash_memory_type": "TLC",
+                    "max_read_speed": "7450 МБ/сек",
+                    "max_write_speed": "6900 МБ/сек"
+                },
                 "400021986": {
                     "name": "Внутренний диск SSD Samsung M.2 980 Pro 2Tb (MZ-V8P2T0BW)",
                     "brand_name": "Samsung",
@@ -1456,18 +1283,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "7000 МБ/сек",
                     "max_write_speed": "5100 МБ/сек"
-                },
-                "400121814": {
-                    "name": "Жесткий диск SSD Samsung 990 Pro 1Tb (MZ-V9P1T0BW)",
-                    "brand_name": "Samsung",
-                    "price": 19190,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-samsung-990-pro-1tb-mz-v9p1t0bw-400121814",
-                    "ssd_memory": "1Tb",
-                    "form_factor": "M.2 Type 2280",
-                    "connection_interface": "PCI Express 4.0",
-                    "flash_memory_type": "TLC",
-                    "max_read_speed": "7450 МБ/сек",
-                    "max_write_speed": "6900 МБ/сек"
                 }
             },
             "SSD_usual": {
@@ -1507,18 +1322,6 @@
                     "max_read_speed": "560 МБ/сек",
                     "max_write_speed": "530 МБ/сек"
                 },
-                "400122512": {
-                    "name": "Жесткий диск SSD Western Digital Blue 500GB (WDS500G3B0A)",
-                    "brand_name": "Western Digital",
-                    "price": 3899,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-western-digital-blue-500gb-wds500g3b0a-400122512",
-                    "ssd_memory": "500GB",
-                    "form_factor": "2.5\"",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D NAND",
-                    "max_read_speed": "560 МБ/сек",
-                    "max_write_speed": "510 МБ/сек"
-                },
                 "30053443": {
                     "name": "Внутренний SSD накопитель Apacer 128GB AS350 (95.DB260.P100C)",
                     "brand_name": "Apacer",
@@ -1555,6 +1358,18 @@
                     "max_read_speed": "560 МБ/сек",
                     "max_write_speed": "540 МБ/сек"
                 },
+                "30054234": {
+                    "name": "Внутренний SSD накопитель GIGABYTE 512GB AORUS RGB AIC NVMe (GP-ASACNE2512GTTDR)",
+                    "brand_name": "GIGABYTE",
+                    "price": 13199,
+                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-gigabyte-512gb-aorus-rgb-aic-nvme-gp-asacne2512gttdr-30054234",
+                    "ssd_memory": "RGB",
+                    "form_factor": "-",
+                    "connection_interface": "PCI-Express 3.0 x 4",
+                    "flash_memory_type": "-",
+                    "max_read_speed": "3480 МБ/сек",
+                    "max_write_speed": "2100 МБ/сек"
+                },
                 "30053500": {
                     "name": "Внутренний SSD накопитель Transcend 2TB SSD230S (TS2TSSD230S)",
                     "brand_name": "Transcend",
@@ -1566,18 +1381,6 @@
                     "flash_memory_type": "3D TLC NAND",
                     "max_read_speed": "560 МБ/сек",
                     "max_write_speed": "520 МБ/сек"
-                },
-                "30045917": {
-                    "name": "Внутренний SSD накопитель HP 120GB S700 2.5 (2DP97AA)",
-                    "brand_name": "HP",
-                    "price": 1399,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-hp-120gb-s700-25-2dp97aa-30045917",
-                    "ssd_memory": "120GB",
-                    "form_factor": "2.5\"",
-                    "connection_interface": "SATA",
-                    "flash_memory_type": "3D TLC",
-                    "max_read_speed": "550 МБ/сек",
-                    "max_write_speed": "480 МБ/сек"
                 },
                 "30054326": {
                     "name": "Внутренний SSD накопитель Apacer 64GB Pro II AS510S (AP64GAS510SB-1)",
@@ -1591,18 +1394,6 @@
                     "max_read_speed": "440 МБ/сек",
                     "max_write_speed": "205 МБ/сек"
                 },
-                "30054234": {
-                    "name": "Внутренний SSD накопитель GIGABYTE 512GB AORUS RGB AIC NVMe (GP-ASACNE2512GTTDR)",
-                    "brand_name": "GIGABYTE",
-                    "price": 13199,
-                    "link": "https://www.mvideo.ru/products/vnutrennii-ssd-nakopitel-gigabyte-512gb-aorus-rgb-aic-nvme-gp-asacne2512gttdr-30054234",
-                    "ssd_memory": "RGB",
-                    "form_factor": "-",
-                    "connection_interface": "PCI-Express 3.0 x 4",
-                    "flash_memory_type": "-",
-                    "max_read_speed": "3480 МБ/сек",
-                    "max_write_speed": "2100 МБ/сек"
-                },
                 "400037267": {
                     "name": "Жесткий диск SSD Smartbuy Nova 120GB SBSSD120-NOV-25S3",
                     "brand_name": "Smartbuy",
@@ -1614,6 +1405,18 @@
                     "flash_memory_type": "3D NAND",
                     "max_read_speed": "520 МБ/сек",
                     "max_write_speed": "480 МБ/сек"
+                },
+                "400037271": {
+                    "name": "Жесткий диск SSD Smartbuy Splash 128GB SBSSD-128GT-MX902-25S3",
+                    "brand_name": "Smartbuy",
+                    "price": 950,
+                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-splash-128gb-sbssd-128gt-mx902-25s3-400037271",
+                    "ssd_memory": "128GB",
+                    "form_factor": "2.5\"",
+                    "connection_interface": "SATA III",
+                    "flash_memory_type": "3D TLC NAND",
+                    "max_read_speed": "560 МБ/сек",
+                    "max_write_speed": "500 МБ/сек"
                 },
                 "400037274": {
                     "name": "Жесткий диск SSD Smartbuy Splash 256GB SBSSD-256GT-MX902-25S3",
@@ -1651,18 +1454,6 @@
                     "max_read_speed": "550 МБ/сек",
                     "max_write_speed": "450 МБ/сек"
                 },
-                "400037271": {
-                    "name": "Жесткий диск SSD Smartbuy Splash 128GB SBSSD-128GT-MX902-25S3",
-                    "brand_name": "Smartbuy",
-                    "price": 950,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-splash-128gb-sbssd-128gt-mx902-25s3-400037271",
-                    "ssd_memory": "128GB",
-                    "form_factor": "2.5\"",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "560 МБ/сек",
-                    "max_write_speed": "500 МБ/сек"
-                },
                 "400136949": {
                     "name": "Жесткий диск SSD Smartbuy Nova 480GB (SBSSD480-NOV-25S3)",
                     "brand_name": "Smartbuy",
@@ -1698,18 +1489,6 @@
                     "flash_memory_type": "3D NAND",
                     "max_read_speed": "500 МБ/сек",
                     "max_write_speed": "450 МБ/сек"
-                },
-                "400037265": {
-                    "name": "Жесткий диск SSD Smartbuy Revival 3 480GB SB480GB-RVVL3-25SAT3",
-                    "brand_name": "Smartbuy",
-                    "price": 2390,
-                    "link": "https://www.mvideo.ru/products/zhestkii-disk-ssd-smartbuy-revival-3-480gb-sb480gb-rvvl3-25sat3-400037265",
-                    "ssd_memory": "SB480GB-RVVL3-25SAT3",
-                    "form_factor": "2.5\"",
-                    "connection_interface": "SATA III",
-                    "flash_memory_type": "3D TLC NAND",
-                    "max_read_speed": "550 МБ/сек",
-                    "max_write_speed": "480 МБ/сек"
                 },
                 "400021945": {
                     "name": "Внутренний диск SSD Samsung 2.5\" 870 Evo 1Tb (MZ-77E1T0BW)",
@@ -1754,56 +1533,12 @@
         "categoryName": "Оперативная память",
         "data": {
             "DDR3": {
-                "30055514": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR3 1600Mhz (PSD34G16002S)",
-                    "brand_name": "Patriot",
-                    "price": 849,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr3-1600mhz-psd34g16002s-30055514",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "1600 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "12800 МБ/сек"
-                },
-                "30055402": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR3 1600Mhz (PSD34G160081)",
-                    "brand_name": "Patriot",
-                    "price": 849,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr3-1600mhz-psd34g160081-30055402",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "1600 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "12800 МБ/сек"
-                },
                 "30055513": {
                     "name": "Оперативная память Patriot 4GB Signature DDR3 1333Mhz (PSD34G1333L2S)",
                     "brand_name": "Patriot",
                     "price": 2399,
                     "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr3-1333mhz-psd34g1333l2s-30055513",
                     "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "1333 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "10600 МБ/сек"
-                },
-                "30041470": {
-                    "name": "Оперативная память Transcend 4GB SO-DIMM DDR3 1600MHz (JM1600KSH-4G)",
-                    "brand_name": "Transcend",
-                    "price": 2690,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-transcend-4gb-so-dimm-ddr3-1600mhz-jm1600ksh-4g-30041470",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "1600 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "12800 МБ/сек"
-                },
-                "30054332": {
-                    "name": "Оперативная память Apacer 8GB SO-DIMM DDR3 1333MHz (AS08GFA33C9TBGC)",
-                    "brand_name": "Apacer",
-                    "price": 4199,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-apacer-8gb-so-dimm-ddr3-1333mhz-as08gfa33c9tbgc-30054332",
-                    "product_module_memory": "8 ГБ",
                     "product_number_of_modules": "1",
                     "product_memory_frequency": "1333 МГц",
                     "product_form_factor": "SO-DIMM",
@@ -1820,51 +1555,29 @@
                     "product_form_factor": "DIMM",
                     "product_throughput": "12800 МБ/сек"
                 },
-                "30061781": {
-                    "name": "Оперативная память Hikvision DDR3 U1 8GB 1600MHz (HKED3081BAA2A0ZA1/8G)",
-                    "brand_name": "Hikvision",
-                    "price": 2099,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr3-u1-8gb-1600mhz-hked3081baa2a0za1-8g-30061781",
+                "30054332": {
+                    "name": "Оперативная память Apacer 8GB SO-DIMM DDR3 1333MHz (AS08GFA33C9TBGC)",
+                    "brand_name": "Apacer",
+                    "price": 4199,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-apacer-8gb-so-dimm-ddr3-1333mhz-as08gfa33c9tbgc-30054332",
                     "product_module_memory": "8 ГБ",
                     "product_number_of_modules": "1",
-                    "product_memory_frequency": "1600 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "12800 МБ/сек"
+                    "product_memory_frequency": "1333 МГц",
+                    "product_form_factor": "SO-DIMM",
+                    "product_throughput": "10600 МБ/сек"
                 }
             },
             "DDR4": {
-                "30055533": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR4 2666Mhz (PSD44G266681S)",
-                    "brand_name": "Patriot",
-                    "price": 799,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr4-2666mhz-psd44g266681s-30055533",
-                    "product_module_memory": "4 ГБ",
+                "30062482": {
+                    "name": "Оперативная память Hikvision DDR4 U10 16GB 3000MHz (HKED4161DAA2D1ZA2/16G)",
+                    "brand_name": "Hikvision",
+                    "price": 4699,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u10-16gb-3000mhz-hked4161daa2d1za2-16g-30062482",
+                    "product_module_memory": "16 ГБ",
                     "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30056763": {
-                    "name": "Оперативная память Netac 4GB Basic DDR4 2666MHz (NTBSD4P26SP-04)",
-                    "brand_name": "Netac",
-                    "price": 1049,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-netac-4gb-basic-ddr4-2666mhz-ntbsd4p26sp-04-30056763",
-                    "product_module_memory": "4GB",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
+                    "product_memory_frequency": "3000 МГц",
                     "product_form_factor": "DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30055409": {
-                    "name": "Оперативная память Patriot 8GB Signature DDR4 2400Mhz (PSD48G240081)",
-                    "brand_name": "Patriot",
-                    "price": 1599,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2400mhz-psd48g240081-30055409",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2400 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "19200 МБ/сек"
+                    "product_throughput": "24000 МБ/сек"
                 },
                 "30064287": {
                     "name": "Оперативная память Hikvision DDR4 U100 8GB 3200MHz (HKED4081CBA2D2ZA4/8G)",
@@ -1877,16 +1590,16 @@
                     "product_form_factor": "U-DIMM",
                     "product_throughput": "23400 МБ/сек"
                 },
-                "30062482": {
-                    "name": "Оперативная память Hikvision DDR4 U10 16GB 3000MHz (HKED4161DAA2D1ZA2/16G)",
-                    "brand_name": "Hikvision",
-                    "price": 4699,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u10-16gb-3000mhz-hked4161daa2d1za2-16g-30062482",
-                    "product_module_memory": "16 ГБ",
+                "30054388": {
+                    "name": "Оперативная память Patriot 8GB Signature DDR4 2666MHz (PSD48G266682)",
+                    "brand_name": "Patriot",
+                    "price": 1599,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2666mhz-psd48g266682-30054388",
+                    "product_module_memory": "8 ГБ",
                     "product_number_of_modules": "1",
-                    "product_memory_frequency": "3000 МГц",
+                    "product_memory_frequency": "2666 МГц",
                     "product_form_factor": "DIMM",
-                    "product_throughput": "24000 МБ/сек"
+                    "product_throughput": "21300 МБ/сек"
                 },
                 "30064285": {
                     "name": "Оперативная память Hikvision DDR4 U1 4GB 2666MHz (HKED4041BAA1D0ZA1/4G)",
@@ -1899,176 +1612,11 @@
                     "product_form_factor": "U-DIMM",
                     "product_throughput": "21300 МБ/сек"
                 },
-                "30055437": {
-                    "name": "Оперативная память Patriot 8GB Signature DDR4 2400Mhz (PSP48G2400KH1)",
-                    "brand_name": "Patriot",
-                    "price": 2599,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2400mhz-psp48g2400kh1-30055437",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "2",
-                    "product_memory_frequency": "2400 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "19200 МБ/сек"
-                },
-                "30055531": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR4 2400Mhz (PSD44G240081S)",
-                    "brand_name": "Patriot",
-                    "price": 849,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr4-2400mhz-psd44g240081s-30055531",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2400 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "19200 МБ/сек"
-                },
-                "30055530": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR4 2133Mhz (PSD44G213381S)",
-                    "brand_name": "Patriot",
-                    "price": 989,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr4-2133mhz-psd44g213381s-30055530",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2133 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "17000 МБ/сек"
-                },
-                "30056765": {
-                    "name": "Оперативная память Netac 16GB Basic DDR4 2666MHz (NTBSD4P26SP-16)",
-                    "brand_name": "Netac",
-                    "price": 3199,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-netac-16gb-basic-ddr4-2666mhz-ntbsd4p26sp-16-30056765",
-                    "product_module_memory": "16GB",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30054388": {
-                    "name": "Оперативная память Patriot 8GB Signature DDR4 2666MHz (PSD48G266682)",
-                    "brand_name": "Patriot",
-                    "price": 1599,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2666mhz-psd48g266682-30054388",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30055431": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR4 2666Mhz (PSD44G266681)",
-                    "brand_name": "Patriot",
-                    "price": 989,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr4-2666mhz-psd44g266681-30055431",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30064286": {
-                    "name": "Оперативная память Hikvision DDR4 U1 8GB 2666MHz (HKED4081CBA1D0ZA1/8G)",
-                    "brand_name": "Hikvision",
-                    "price": 1899,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u1-8gb-2666mhz-hked4081cba1d0za1-8g-30064286",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "U-DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30064288": {
-                    "name": "Оперативная память Hikvision DDR4 U100 16GB 3200MHz (HKED4161DAA2D2ZA4/16G)",
-                    "brand_name": "Hikvision",
-                    "price": 6699,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u100-16gb-3200mhz-hked4161daa2d2za4-16g-30064288",
-                    "product_module_memory": "16 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "3200 МГц",
-                    "product_form_factor": "U-DIMM",
-                    "product_throughput": "23400 МБ/сек"
-                },
                 "30064289": {
                     "name": "Оперативная память Hikvision DDR4 S1 4GB 2666MHz (HKED4042BBA1D0ZA1/4G)",
                     "brand_name": "Hikvision",
                     "price": 999,
                     "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-s1-4gb-2666mhz-hked4042bba1d0za1-4g-30064289",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30055479": {
-                    "name": "Оперативная память Patriot 4GB Viper 4 Elite DDR4 2400Mhz (PVE44G240C6GY)",
-                    "brand_name": "Patriot",
-                    "price": 2399,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-viper-4-elite-ddr4-2400mhz-pve44g240c6gy-30055479",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2400 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "19200 МБ/сек"
-                },
-                "30055478": {
-                    "name": "Оперативная память Patriot 32GB Viper 4 Elite DDR4 2666Mhz (PVE432G266C6GY)",
-                    "brand_name": "Patriot",
-                    "price": 16899,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-32gb-viper-4-elite-ddr4-2666mhz-pve432g266c6gy-30055478",
-                    "product_module_memory": "32 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2666 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "21300 МБ/сек"
-                },
-                "30055473": {
-                    "name": "Оперативная память Patriot 16GB Viper RGB DDR4 4000Mhz (PVR416G400C9K)",
-                    "brand_name": "Patriot",
-                    "price": 12699,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-16gb-viper-rgb-ddr4-4000mhz-pvr416g400c9k-30055473",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "2",
-                    "product_memory_frequency": "4000 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "32000 МБ/сек"
-                },
-                "30055472": {
-                    "name": "Оперативная память Patriot 8GB Viper 4 Blackout DDR4 3200Mhz (PVB48G320C6K)",
-                    "brand_name": "Patriot",
-                    "price": 2599,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-viper-4-blackout-ddr4-3200mhz-pvb48g320c6k-30055472",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "2",
-                    "product_memory_frequency": "3200 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "25600 МБ/сек"
-                },
-                "30055434": {
-                    "name": "Оперативная память Patriot 8GB Signature DDR4 2666Mhz (PSD48G2133K)",
-                    "brand_name": "Patriot",
-                    "price": 3199,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2666mhz-psd48g2133k-30055434",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "2",
-                    "product_memory_frequency": "2133 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "17000 МБ/сек"
-                },
-                "30055521": {
-                    "name": "Оперативная память Patriot 4GB Signature DDR4 2400Mhz (PSD44G240041S)",
-                    "brand_name": "Patriot",
-                    "price": 949,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-4gb-signature-ddr4-2400mhz-psd44g240041s-30055521",
-                    "product_module_memory": "4 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "2400 МГц",
-                    "product_form_factor": "SO-DIMM",
-                    "product_throughput": "19200 МБ/сек"
-                },
-                "30041472": {
-                    "name": "Оперативная память Transcend 4GB SO-DIMM DDR4 2666MHz (JM2666HSH-4G)",
-                    "brand_name": "Transcend",
-                    "price": 1999,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-transcend-4gb-so-dimm-ddr4-2666mhz-jm2666hsh-4g-30041472",
                     "product_module_memory": "4 ГБ",
                     "product_number_of_modules": "1",
                     "product_memory_frequency": "2666 МГц",
@@ -2086,6 +1634,17 @@
                     "product_form_factor": "U-DIMM",
                     "product_throughput": "21300 МБ/сек"
                 },
+                "30055478": {
+                    "name": "Оперативная память Patriot 32GB Viper 4 Elite DDR4 2666Mhz (PVE432G266C6GY)",
+                    "brand_name": "Patriot",
+                    "price": 16899,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-32gb-viper-4-elite-ddr4-2666mhz-pve432g266c6gy-30055478",
+                    "product_module_memory": "32 ГБ",
+                    "product_number_of_modules": "1",
+                    "product_memory_frequency": "2666 МГц",
+                    "product_form_factor": "DIMM",
+                    "product_throughput": "21300 МБ/сек"
+                },
                 "30054392": {
                     "name": "Оперативная память Patriot 16GB Viper Steel DDR4 3000Mhz (PVS416G300C6K)",
                     "brand_name": "Patriot",
@@ -2096,6 +1655,28 @@
                     "product_memory_frequency": "3000 МГц",
                     "product_form_factor": "DIMM",
                     "product_throughput": "24000 МБ/сек"
+                },
+                "30064288": {
+                    "name": "Оперативная память Hikvision DDR4 U100 16GB 3200MHz (HKED4161DAA2D2ZA4/16G)",
+                    "brand_name": "Hikvision",
+                    "price": 6699,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u100-16gb-3200mhz-hked4161daa2d2za4-16g-30064288",
+                    "product_module_memory": "16 ГБ",
+                    "product_number_of_modules": "1",
+                    "product_memory_frequency": "3200 МГц",
+                    "product_form_factor": "U-DIMM",
+                    "product_throughput": "23400 МБ/сек"
+                },
+                "30055434": {
+                    "name": "Оперативная память Patriot 8GB Signature DDR4 2666Mhz (PSD48G2133K)",
+                    "brand_name": "Patriot",
+                    "price": 3199,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-patriot-8gb-signature-ddr4-2666mhz-psd48g2133k-30055434",
+                    "product_module_memory": "4 ГБ",
+                    "product_number_of_modules": "2",
+                    "product_memory_frequency": "2133 МГц",
+                    "product_form_factor": "DIMM",
+                    "product_throughput": "17000 МБ/сек"
                 },
                 "400056138": {
                     "name": "Оперативная память Netac Basic 8GB DDR4-3200 (NTBSD4N32SP-08)",
@@ -2108,28 +1689,6 @@
                     "product_form_factor": "SO-DIMM",
                     "product_throughput": "25600 МБ/сек"
                 },
-                "30061787": {
-                    "name": "Оперативная память Hikvision DDR4 U1 16GB 3200MHz (HKED4161CAB2F1ZB1/16G)",
-                    "brand_name": "Hikvision",
-                    "price": 3899,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u1-16gb-3200mhz-hked4161cab2f1zb1-16g-30061787",
-                    "product_module_memory": "16 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "3200 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "25600 МБ/сек"
-                },
-                "400056280": {
-                    "name": "Оперативная память Netac Shadow 8GB DDR4-3600 Yellow (NTSDD4P36SP-08Y)",
-                    "brand_name": "Netac",
-                    "price": 2099,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-netac-shadow-8gb-ddr4-3600-yellow-ntsdd4p36sp-08y-400056280",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "3600 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "28800 МБ/сек"
-                },
                 "400056277": {
                     "name": "Оперативная память Netac Shadow 8GB DDR4-3600 Blue (NTSDD4P36SP-08B)",
                     "brand_name": "Netac",
@@ -2141,52 +1700,19 @@
                     "product_form_factor": "DIMM",
                     "product_throughput": "28800 МБ/сек"
                 },
-                "30061793": {
-                    "name": "Оперативная память Hikvision DDR4 U10 8GB 3200MHz (HKED4081CAA2F0ZB2/8G)",
-                    "brand_name": "Hikvision",
-                    "price": 1999,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u10-8gb-3200mhz-hked4081caa2f0zb2-8g-30061793",
+                "400056280": {
+                    "name": "Оперативная память Netac Shadow 8GB DDR4-3600 Yellow (NTSDD4P36SP-08Y)",
+                    "brand_name": "Netac",
+                    "price": 2099,
+                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-netac-shadow-8gb-ddr4-3600-yellow-ntsdd4p36sp-08y-400056280",
                     "product_module_memory": "8 ГБ",
                     "product_number_of_modules": "1",
-                    "product_memory_frequency": "3200 МГц",
+                    "product_memory_frequency": "3600 МГц",
                     "product_form_factor": "DIMM",
-                    "product_throughput": "25600 МБ/сек"
-                },
-                "30061792": {
-                    "name": "Оперативная память Hikvision DDR4 U10 8GB 3000MHz (HKED4081CBA2D1ZA2/8G)",
-                    "brand_name": "Hikvision",
-                    "price": 1899,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u10-8gb-3000mhz-hked4081cba2d1za2-8g-30061792",
-                    "product_module_memory": "8 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "3000 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "24000 МБ/сек"
-                },
-                "30061786": {
-                    "name": "Оперативная память Hikvision DDR4 U10 16GB 3200MHz (HKED4161DAA2F0ZB2/16G)",
-                    "brand_name": "Hikvision",
-                    "price": 3999,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-hikvision-ddr4-u10-16gb-3200mhz-hked4161daa2f0zb2-16g-30061786",
-                    "product_module_memory": "16 ГБ",
-                    "product_number_of_modules": "1",
-                    "product_memory_frequency": "3200 МГц",
-                    "product_form_factor": "DIMM",
-                    "product_throughput": "25600 МБ/сек"
+                    "product_throughput": "28800 МБ/сек"
                 }
             },
             "DDR5": {
-                "50174141": {
-                    "name": "Оперативная память GIGABYTE AORUS DDR5 32GB GP-ARS32G52D5",
-                    "brand_name": "GIGABYTE",
-                    "price": 11999,
-                    "link": "https://www.mvideo.ru/products/operativnaya-pamyat-gigabyte-aorus-ddr5-32gb-gp-ars32g52d5-50174141",
-                    "product_module_memory": "16 ГБ",
-                    "product_number_of_modules": "2",
-                    "product_memory_frequency": "5200 МГц",
-                    "product_form_factor": "U-DIMM",
-                    "product_throughput": "-"
-                },
                 "400034466": {
                     "name": "Оперативная память ADATA 32GB DDR5 4800 UDIMM (AD5U480032G-S)",
                     "brand_name": "ADATA",
@@ -2226,23 +1752,23 @@
     "5432": {
         "categoryName": "Материнские платы",
         "data": {
-            "30062114": {
-                "name": "Материнская плата GIGABYTE H510 S1200 MATX H410M S2H V3 1.1",
-                "brand_name": "GIGABYTE",
-                "price": 5499,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-gigabyte-h510-s1200-matx-h410m-s2h-v3-11-30062114",
-                "form_factor": "Micro-ATX",
-                "raid": "-",
-                "socket": "1200",
+            "30065994": {
+                "name": "Материнская плата ASUS PRIME Z690M-PLUS D4",
+                "brand_name": "ASUS",
+                "price": 17999,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-asus-prime-z690m-plus-d4-30065994",
+                "form_factor": "ATX",
+                "raid": "0. 1. 5. 10",
+                "socket": "1700",
                 "memory_type": "DDR4",
-                "ram_number": "2",
-                "pci_e_x1": "1",
-                "pci_e_x16": "1",
-                "pci_e_m2": "1",
+                "ram_number": "4",
+                "pci_e_x1": "2",
+                "pci_e_x16": "2",
+                "pci_e_m2": "-",
                 "wifi": "-",
                 "bluetooth": "-",
                 "hdmi": "1",
-                "dp": "-"
+                "dp": "1"
             },
             "30061914": {
                 "name": "Материнская плата MSI MEG Z490I UNIFY",
@@ -2261,24 +1787,6 @@
                 "bluetooth": "4.2",
                 "hdmi": "1",
                 "dp": "1"
-            },
-            "30061076": {
-                "name": "Материнская плата MSI H510M-A PRO",
-                "brand_name": "MSI",
-                "price": 5999,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-h510m-a-pro-30061076",
-                "form_factor": "Micro-ATX",
-                "raid": "-",
-                "socket": "1200",
-                "memory_type": "DDR4",
-                "ram_number": "2",
-                "pci_e_x1": "-",
-                "pci_e_x16": "1",
-                "pci_e_m2": "2",
-                "wifi": "-",
-                "bluetooth": "-",
-                "hdmi": "1",
-                "dp": "-"
             },
             "30066022": {
                 "name": "Материнская плата MSI MPG Z490 GAMING EDGE WIFI",
@@ -2316,23 +1824,23 @@
                 "hdmi": "1",
                 "dp": "1"
             },
-            "30061144": {
-                "name": "Материнская плата MSI B560M PRO",
-                "brand_name": "MSI",
-                "price": 10299,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-b560m-pro-30061144",
+            "30062114": {
+                "name": "Материнская плата GIGABYTE H510 S1200 MATX H410M S2H V3 1.1",
+                "brand_name": "GIGABYTE",
+                "price": 5499,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-gigabyte-h510-s1200-matx-h410m-s2h-v3-11-30062114",
                 "form_factor": "Micro-ATX",
                 "raid": "-",
-                "socket": "LGA1200",
+                "socket": "1200",
                 "memory_type": "DDR4",
                 "ram_number": "2",
-                "pci_e_x1": "-",
-                "pci_e_x16": "2",
+                "pci_e_x1": "1",
+                "pci_e_x16": "1",
                 "pci_e_m2": "1",
                 "wifi": "-",
                 "bluetooth": "-",
                 "hdmi": "1",
-                "dp": "1"
+                "dp": "-"
             },
             "30063847": {
                 "name": "Материнская плата MSI MEG Z590 GODLIKE",
@@ -2347,6 +1855,42 @@
                 "pci_e_x1": "3",
                 "pci_e_x16": "-",
                 "pci_e_m2": "-",
+                "wifi": "a/b/g/n/ac/ax",
+                "bluetooth": "5.2",
+                "hdmi": "-",
+                "dp": "-"
+            },
+            "30062403": {
+                "name": "Материнская плата MSI Z690 S1700 ATX PRO Z690-P DDR4",
+                "brand_name": "MSI",
+                "price": 22199,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z690-s1700-atx-pro-z690-p-ddr4-30062403",
+                "form_factor": "ATX",
+                "raid": "0. 1. 5. 10",
+                "socket": "1700",
+                "memory_type": "DDR4",
+                "ram_number": "4",
+                "pci_e_x1": "1",
+                "pci_e_x16": "3",
+                "pci_e_m2": "3",
+                "wifi": "-",
+                "bluetooth": "-",
+                "hdmi": "1",
+                "dp": "1"
+            },
+            "30062348": {
+                "name": "Материнская плата MSI Z690 S1700 ATX MEG Z690 UNIFY",
+                "brand_name": "MSI",
+                "price": 37799,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z690-s1700-atx-meg-z690-unify-30062348",
+                "form_factor": "ATX",
+                "raid": "0. 1. 5. 10",
+                "socket": "1700",
+                "memory_type": "DDR5",
+                "ram_number": "4",
+                "pci_e_x1": "-",
+                "pci_e_x16": "-",
+                "pci_e_m2": "5",
                 "wifi": "a/b/g/n/ac/ax",
                 "bluetooth": "5.2",
                 "hdmi": "-",
@@ -2387,42 +1931,6 @@
                 "bluetooth": "-",
                 "hdmi": "1",
                 "dp": "1"
-            },
-            "30062403": {
-                "name": "Материнская плата MSI Z690 S1700 ATX PRO Z690-P DDR4",
-                "brand_name": "MSI",
-                "price": 22199,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z690-s1700-atx-pro-z690-p-ddr4-30062403",
-                "form_factor": "ATX",
-                "raid": "0. 1. 5. 10",
-                "socket": "1700",
-                "memory_type": "DDR4",
-                "ram_number": "4",
-                "pci_e_x1": "1",
-                "pci_e_x16": "3",
-                "pci_e_m2": "3",
-                "wifi": "-",
-                "bluetooth": "-",
-                "hdmi": "1",
-                "dp": "1"
-            },
-            "30062348": {
-                "name": "Материнская плата MSI Z690 S1700 ATX MEG Z690 UNIFY",
-                "brand_name": "MSI",
-                "price": 37799,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z690-s1700-atx-meg-z690-unify-30062348",
-                "form_factor": "ATX",
-                "raid": "0. 1. 5. 10",
-                "socket": "1700",
-                "memory_type": "DDR5",
-                "ram_number": "4",
-                "pci_e_x1": "-",
-                "pci_e_x16": "-",
-                "pci_e_m2": "5",
-                "wifi": "a/b/g/n/ac/ax",
-                "bluetooth": "5.2",
-                "hdmi": "-",
-                "dp": "-"
             },
             "30066001": {
                 "name": "Материнская плата GIGABYTE Z690M DS3H DDR4",
@@ -2514,42 +2022,6 @@
                 "hdmi": "1",
                 "dp": "1"
             },
-            "30061916": {
-                "name": "Материнская плата MSI Z590 S1200 ATX MPG Z590 GAMING EDGE WIFI",
-                "brand_name": "MSI",
-                "price": 26399,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z590-s1200-atx-mpg-z590-gaming-edge-wifi-30061916",
-                "form_factor": "ATX",
-                "raid": "0. 1. 5. 10",
-                "socket": "1200",
-                "memory_type": "DDR4",
-                "ram_number": "4",
-                "pci_e_x1": "2",
-                "pci_e_x16": "2",
-                "pci_e_m2": "3",
-                "wifi": "802.11 a/b/g/n/ac",
-                "bluetooth": "4.2",
-                "hdmi": "1",
-                "dp": "1"
-            },
-            "30061915": {
-                "name": "Материнская плата MSI Z590 S1200 ATX Z590 PRO WIFI",
-                "brand_name": "MSI",
-                "price": 21999,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z590-s1200-atx-z590-pro-wifi-30061915",
-                "form_factor": "ATX",
-                "raid": "0. 1. 5. 10",
-                "socket": "1200",
-                "memory_type": "DDR4",
-                "ram_number": "4",
-                "pci_e_x1": "1",
-                "pci_e_x16": "2",
-                "pci_e_m2": "3",
-                "wifi": "802.11 a/b/g/n/ac",
-                "bluetooth": "4.2",
-                "hdmi": "1",
-                "dp": "1"
-            },
             "30065991": {
                 "name": "Материнская плата ASUS PROART Z690-CREATOR WIFI",
                 "brand_name": "ASUS",
@@ -2586,24 +2058,6 @@
                 "hdmi": "1",
                 "dp": "1"
             },
-            "30065994": {
-                "name": "Материнская плата ASUS PRIME Z690M-PLUS D4",
-                "brand_name": "ASUS",
-                "price": 17999,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-asus-prime-z690m-plus-d4-30065994",
-                "form_factor": "ATX",
-                "raid": "0. 1. 5. 10",
-                "socket": "1700",
-                "memory_type": "DDR4",
-                "ram_number": "4",
-                "pci_e_x1": "2",
-                "pci_e_x16": "2",
-                "pci_e_m2": "-",
-                "wifi": "-",
-                "bluetooth": "-",
-                "hdmi": "1",
-                "dp": "1"
-            },
             "30065996": {
                 "name": "Материнская плата ASUS PRIME Z590-A",
                 "brand_name": "ASUS",
@@ -2619,6 +2073,24 @@
                 "pci_e_m2": "-",
                 "wifi": "-",
                 "bluetooth": "-",
+                "hdmi": "1",
+                "dp": "1"
+            },
+            "30061916": {
+                "name": "Материнская плата MSI Z590 S1200 ATX MPG Z590 GAMING EDGE WIFI",
+                "brand_name": "MSI",
+                "price": 26399,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-msi-z590-s1200-atx-mpg-z590-gaming-edge-wifi-30061916",
+                "form_factor": "ATX",
+                "raid": "0. 1. 5. 10",
+                "socket": "1200",
+                "memory_type": "DDR4",
+                "ram_number": "4",
+                "pci_e_x1": "2",
+                "pci_e_x16": "2",
+                "pci_e_m2": "3",
+                "wifi": "802.11 a/b/g/n/ac",
+                "bluetooth": "4.2",
                 "hdmi": "1",
                 "dp": "1"
             },
@@ -2658,24 +2130,6 @@
                 "hdmi": "1",
                 "dp": "1"
             },
-            "400088962": {
-                "name": "Материнская плата GIGABYTE B760M DS3H DDR4",
-                "brand_name": "GIGABYTE",
-                "price": 13790,
-                "link": "https://www.mvideo.ru/products/materinskaya-plata-gigabyte-b760m-ds3h-ddr4-400088962",
-                "form_factor": "Micro-ATX",
-                "raid": "-",
-                "socket": "1700",
-                "memory_type": "DDR4",
-                "ram_number": "4",
-                "pci_e_x1": "1",
-                "pci_e_x16": "2",
-                "pci_e_m2": "2",
-                "wifi": "-",
-                "bluetooth": "-",
-                "hdmi": "1",
-                "dp": "2"
-            },
             "400042923": {
                 "name": "Материнская плата ASUS Tuf Gaming B560-Plus WiFi",
                 "brand_name": "ASUS",
@@ -2693,6 +2147,1752 @@
                 "bluetooth": "5.0",
                 "hdmi": "1",
                 "dp": "1"
+            },
+            "400088962": {
+                "name": "Материнская плата GIGABYTE B760M DS3H DDR4",
+                "brand_name": "GIGABYTE",
+                "price": 13790,
+                "link": "https://www.mvideo.ru/products/materinskaya-plata-gigabyte-b760m-ds3h-ddr4-400088962",
+                "form_factor": "Micro-ATX",
+                "raid": "-",
+                "socket": "1700",
+                "memory_type": "DDR4",
+                "ram_number": "4",
+                "pci_e_x1": "1",
+                "pci_e_x16": "2",
+                "pci_e_m2": "2",
+                "wifi": "-",
+                "bluetooth": "-",
+                "hdmi": "1",
+                "dp": "2"
+            }
+        }
+    },
+    "5435": {
+        "categoryName": "Блоки питания",
+        "data": {
+            "30048974": {
+                "name": "Блок питания для компьютера HIPER 450W HP-450TFX",
+                "brand_name": "HIPER",
+                "price": 4899,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-hiper-450w-hp-450tfx-30048974",
+                "power": "450 Вт",
+                "standard": "TFX",
+                "overload_protection": "-",
+                "surge_protection": "Да"
+            },
+            "30048949": {
+                "name": "Блок питания для компьютера Super Flower 850W Leadex Platinum SF-850F14MP",
+                "brand_name": "Super Flower",
+                "price": 17390,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-super-flower-850w-leadex-platinum-sf-850f14mp-30048949",
+                "power": "850 Вт",
+                "standard": "ATX12V",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182306": {
+                "name": "Блок питания для компьютера Ginzzu CB650 12см",
+                "brand_name": "Ginzzu",
+                "price": 3780,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb650-12sm-4182306",
+                "power": "650 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182298": {
+                "name": "Блок питания для компьютера Ginzzu SB450 12см",
+                "brand_name": "Ginzzu",
+                "price": 1520,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-sb450-12sm-4182298",
+                "power": "450 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182312": {
+                "name": "Блок питания для компьютера Ginzzu PC800 14см 80+",
+                "brand_name": "Ginzzu",
+                "price": 5600,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-pc800-14sm-80-4182312",
+                "power": "800 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182295": {
+                "name": "Блок питания для компьютера Winard 600 WA12 12см Black",
+                "brand_name": "Winard",
+                "price": 2190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-600-wa12-12sm-black-4182295",
+                "power": "600 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182300": {
+                "name": "Блок питания для компьютера Ginzzu SB500 12см",
+                "brand_name": "Ginzzu",
+                "price": 1830,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-sb500-12sm-4182300",
+                "power": "500 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182307": {
+                "name": "Блок питания для компьютера Ginzzu CB700 12см",
+                "brand_name": "Ginzzu",
+                "price": 4140,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb700-12sm-4182307",
+                "power": "700 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182296": {
+                "name": "Блок питания для компьютера Ginzzu SA400",
+                "brand_name": "Ginzzu",
+                "price": 1280,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-sa400-4182296",
+                "power": "400 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182305": {
+                "name": "Блок питания для компьютера Ginzzu CB600 12см",
+                "brand_name": "Ginzzu",
+                "price": 3290,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb600-12sm-4182305",
+                "power": "600 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182309": {
+                "name": "Блок питания для компьютера Ginzzu PC500 14см 80+",
+                "brand_name": "Ginzzu",
+                "price": 4100,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-pc500-14sm-80-4182309",
+                "power": "500 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182311": {
+                "name": "Блок питания для компьютера Ginzzu PC700 14см 80+",
+                "brand_name": "Ginzzu",
+                "price": 4870,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-pc700-14sm-80-4182311",
+                "power": "700 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182293": {
+                "name": "Блок питания для компьютера Winard 500 WA",
+                "brand_name": "Winard",
+                "price": 1580,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-500-wa-4182293",
+                "power": "500 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182292": {
+                "name": "Блок питания для компьютера Winard 450 WA12 12 см",
+                "brand_name": "Winard",
+                "price": 1460,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-450-wa12-12-sm-4182292",
+                "power": "400 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182290": {
+                "name": "Блок питания для компьютера Winard 400 WA",
+                "brand_name": "Winard",
+                "price": 1220,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-400-wa-4182290",
+                "power": "400 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182310": {
+                "name": "Блок питания для компьютера Ginzzu PC600 14см 80+",
+                "brand_name": "Ginzzu",
+                "price": 4380,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-pc600-14sm-80-4182310",
+                "power": "600 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400076810": {
+                "name": "Блок питания для компьютера Buro BUM-0220B65",
+                "brand_name": "Buro",
+                "price": 1500,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-buro-bum-0220b65-400076810",
+                "power": "65 Вт",
+                "standard": "-",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400076809": {
+                "name": "Блок питания для компьютера Buro BUM-0031T65",
+                "brand_name": "Buro",
+                "price": 1700,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-buro-bum-0031t65-400076809",
+                "power": "65 Вт",
+                "standard": "-",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182294": {
+                "name": "Блок питания для компьютера Winard 500 WA12 12см",
+                "brand_name": "Winard",
+                "price": 1710,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-500-wa12-12sm-4182294",
+                "power": "500 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4202023": {
+                "name": "Блок питания для компьютера Pitatel для Acer 19V 3.42A 5.5x1.7 374396",
+                "brand_name": "Pitatel",
+                "price": 309,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-pitatel-dlya-acer-19v-342a-55x17-374396-4202023",
+                "power": "65 Вт",
+                "standard": "-",
+                "overload_protection": "-",
+                "surge_protection": "-"
+            },
+            "400073133": {
+                "name": "Блок питания для компьютера Aerocool KCAS Plus 1200GM V2",
+                "brand_name": "Aerocool",
+                "price": 15490,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-aerocool-kcas-plus-1200gm-v2-400073133",
+                "power": "1200 Вт",
+                "standard": "ATX 12V V2.4",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400073132": {
+                "name": "Блок питания для компьютера Aerocool KCAS Plus 1000GM V2",
+                "brand_name": "Aerocool",
+                "price": 15190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-aerocool-kcas-plus-1000gm-v2-400073132",
+                "power": "1000 Вт",
+                "standard": "ATX 12V V2.4",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400073135": {
+                "name": "Блок питания для компьютера Deepcool DQ650-M-V2L",
+                "brand_name": "Deepcool",
+                "price": 11290,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-deepcool-dq650-m-v2l-400073135",
+                "power": "650 Вт",
+                "standard": "ATX 12V V2.31",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400076808": {
+                "name": "Блок питания для компьютера Gembird NPA-AC1D",
+                "brand_name": "Gembird",
+                "price": 1750,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-gembird-npa-ac1d-400076808",
+                "power": "90 Вт",
+                "standard": "-",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400041140": {
+                "name": "Блок питания для компьютера Accord ACC-P300W",
+                "brand_name": "Accord",
+                "price": 1330,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-accord-acc-p300w-400041140",
+                "power": "300 Вт",
+                "standard": "-",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400040334": {
+                "name": "Блок питания для компьютера Deepcool PM800D 800W",
+                "brand_name": "Deepcool",
+                "price": 11190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-deepcool-pm800d-800w-400040334",
+                "power": "800 Вт",
+                "standard": "-",
+                "overload_protection": "-",
+                "surge_protection": "-"
+            },
+            "4182302": {
+                "name": "Блок питания для компьютера Ginzzu CB450 12см",
+                "brand_name": "Ginzzu",
+                "price": 2310,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb450-12sm-4182302",
+                "power": "450 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182315": {
+                "name": "Блок питания для компьютера Ginzzu MC700 14см 80+Bronze",
+                "brand_name": "Ginzzu",
+                "price": 5720,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-mc700-14sm-80bronze-4182315",
+                "power": "700 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182316": {
+                "name": "Блок питания для компьютера Ginzzu MC800 14см 80+Bronze",
+                "brand_name": "Ginzzu",
+                "price": 7190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-mc800-14sm-80bronze-4182316",
+                "power": "800 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182291": {
+                "name": "Блок питания для компьютера Winard 450 WA",
+                "brand_name": "Winard",
+                "price": 1340,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-winard-450-wa-4182291",
+                "power": "450 Вт",
+                "standard": "ATX 12V 2.2",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182303": {
+                "name": "Блок питания для компьютера Ginzzu CB500 12см",
+                "brand_name": "Ginzzu",
+                "price": 2680,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb500-12sm-4182303",
+                "power": "500 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182301": {
+                "name": "Блок питания для компьютера Ginzzu CA450 12см",
+                "brand_name": "Ginzzu",
+                "price": 2190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-ca450-12sm-4182301",
+                "power": "450 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182304": {
+                "name": "Блок питания для компьютера Ginzzu CB550 12см",
+                "brand_name": "Ginzzu",
+                "price": 2920,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-cb550-12sm-4182304",
+                "power": "550 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "4182314": {
+                "name": "Блок питания для компьютера Ginzzu MC600 14см 80+Bronze",
+                "brand_name": "Ginzzu",
+                "price": 4260,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-mc600-14sm-80bronze-4182314",
+                "power": "600 Вт",
+                "standard": "ATX 12V 2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400039382": {
+                "name": "Блок питания для компьютера Ginzzu MC1000 14CM 80 PLUS Bronze",
+                "brand_name": "Ginzzu",
+                "price": 10890,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-ginzzu-mc1000-14cm-80-plus-bronze-400039382",
+                "power": "1000 Вт",
+                "standard": "ATX 12V V2.3",
+                "overload_protection": "Да",
+                "surge_protection": "Да"
+            },
+            "400039106": {
+                "name": "Блок питания для компьютера Deepcool DQ850-M-V2L 850W",
+                "brand_name": "Deepcool",
+                "price": 15190,
+                "link": "https://www.mvideo.ru/products/blok-pitaniya-dlya-komputera-deepcool-dq850-m-v2l-850w-400039106",
+                "power": "890 Вт",
+                "standard": "-",
+                "overload_protection": "-",
+                "surge_protection": "-"
+            }
+        }
+    },
+    "5434": {
+        "categoryName": "Корпуса",
+        "data": {
+            "30058922": {
+                "name": "Корпус для компьютера HIPER XG301 POLARIS 2",
+                "brand_name": "HIPER",
+                "price": 6499,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-xg301-polaris-2-30058922",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "4.1 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30061105": {
+                "name": "Корпус для компьютера HIPER Office D3020 U3 Black 500W",
+                "brand_name": "HIPER",
+                "price": 4199,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-office-d3020-u3-black-500w-30061105",
+                "size_properties": {
+                    "size": "Slim Desktop",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "2",
+                "weight": "2.7 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "30058940": {
+                "name": "Корпус для компьютера HIPER HG304 ATOM",
+                "brand_name": "HIPER",
+                "price": 9999,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-hg304-atom-30058940",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "5.1 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30058921": {
+                "name": "Корпус для компьютера HIPER XG300 POLARIS",
+                "brand_name": "HIPER",
+                "price": 6499,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-xg300-polaris-30058921",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "4.1 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30058920": {
+                "name": "Корпус для компьютера HIPER HG301 DESTROYER",
+                "brand_name": "HIPER",
+                "price": 4999,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-hg301-destroyer-30058920",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3.16 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30058927": {
+                "name": "Корпус для компьютера HIPER WG301 HUND",
+                "brand_name": "HIPER",
+                "price": 7999,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-wg301-hund-30058927",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "7 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30058939": {
+                "name": "Корпус для компьютера HIPER HG302 SHADOW",
+                "brand_name": "HIPER",
+                "price": 5599,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-hiper-hg302-shadow-30058939",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "5.1 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "30049354": {
+                "name": "Корпус для компьютера Sharkoon NIGHT SHARK lite",
+                "brand_name": "Sharkoon",
+                "price": 7999,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-sharkoon-night-shark-lite-30049354",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "-",
+                "weight": "8.44 кг",
+                "material": "сталь/ закаленное стекло",
+                "color": "черный"
+            },
+            "4182341": {
+                "name": "Корпус для компьютера Ginzzu A250 Window",
+                "brand_name": "Ginzzu",
+                "price": 2800,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-a250-window-4182341",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.5 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182324": {
+                "name": "Корпус для компьютера Ginzzu D370 RGB Window",
+                "brand_name": "Ginzzu",
+                "price": 2800,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d370-rgb-window-4182324",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.2 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "400106956": {
+                "name": "Корпус для компьютера Ginzzu B350",
+                "brand_name": "Ginzzu",
+                "price": 2800,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b350-400106956",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "1.7 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "4182318": {
+                "name": "Корпус для компьютера Ginzzu B185 White",
+                "brand_name": "Ginzzu",
+                "price": 2070,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b185-white-4182318",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "1.99 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "4182317": {
+                "name": "Корпус для компьютера Ginzzu B180",
+                "brand_name": "Ginzzu",
+                "price": 1950,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b180-4182317",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "1.99 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182325": {
+                "name": "Корпус для компьютера Ginzzu D380 RGB White",
+                "brand_name": "Ginzzu",
+                "price": 2680,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d380-rgb-white-4182325",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.2 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "400000370": {
+                "name": "Корпус для компьютера Ginzzu SL600 боковое окно, 4 LED вент.",
+                "brand_name": "Ginzzu",
+                "price": 5480,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl600-bokovoe-okno-4-led-vent-400000370",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "2.6 кг",
+                "material": "акрил/ металл",
+                "color": "черный"
+            },
+            "4182322": {
+                "name": "Корпус для компьютера Ginzzu D180",
+                "brand_name": "Ginzzu",
+                "price": 2070,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d180-4182322",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.5 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182352": {
+                "name": "Корпус для компьютера Ginzzu CL185 White",
+                "brand_name": "Ginzzu",
+                "price": 4750,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl185-white-4182352",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "4.8 кг",
+                "material": "сталь",
+                "color": "белый/ черный"
+            },
+            "400000337": {
+                "name": "Корпус для компьютера Ginzzu SL150 панель с RGB подсветкой",
+                "brand_name": "Ginzzu",
+                "price": 4020,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl150-panel-s-rgb-podsvetkoi-400000337",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "2.6 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "4182378": {
+                "name": "Корпус для компьютера Winard 5816 mATX USB/AU",
+                "brand_name": "Winard",
+                "price": 2180,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-5816-matx-usb-au-4182378",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.55 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "4182370": {
+                "name": "Корпус для компьютера Ginzzu GL220 White",
+                "brand_name": "Ginzzu",
+                "price": 5480,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-gl220-white-4182370",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.23 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "4182366": {
+                "name": "Корпус для компьютера Ginzzu SL220 White FAN 12LED USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 4990,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl220-white-fan-12led-usb30-window-4182366",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "3.01 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "4182320": {
+                "name": "Корпус для компьютера Ginzzu B200 USB3.0",
+                "brand_name": "Ginzzu",
+                "price": 2190,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b200-usb30-4182320",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "1.99 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182353": {
+                "name": "Корпус для компьютера Ginzzu CL190",
+                "brand_name": "Ginzzu",
+                "price": 4870,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl190-4182353",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "4.8 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "400000368": {
+                "name": "Корпус для компьютера Ginzzu SL190 боковое окно, ATX",
+                "brand_name": "Ginzzu",
+                "price": 4020,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl190-bokovoe-okno-atx-400000368",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "2.6 кг",
+                "material": "акрил/ металл",
+                "color": "черный"
+            },
+            "4182319": {
+                "name": "Корпус для компьютера Ginzzu B190",
+                "brand_name": "Ginzzu",
+                "price": 1950,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b190-4182319",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "1.99 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182321": {
+                "name": "Корпус для компьютера Ginzzu B220",
+                "brand_name": "Ginzzu",
+                "price": 1950,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b220-4182321",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "1.99 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182369": {
+                "name": "Корпус для компьютера Ginzzu GL200",
+                "brand_name": "Ginzzu",
+                "price": 5360,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-gl200-4182369",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.23 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182365": {
+                "name": "Корпус для компьютера Ginzzu SL200 FAN 12LED USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 4870,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl200-fan-12led-usb30-window-4182365",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "3.01 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182351": {
+                "name": "Корпус для компьютера Ginzzu CL180",
+                "brand_name": "Ginzzu",
+                "price": 4630,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl180-4182351",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "1",
+                "weight": "4.8 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182361": {
+                "name": "Корпус для компьютера Ginzzu CL280 FAN 12CM RGBх4 USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 7310,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl280-fan-12cm-rgbh4-usb30-window-4182361",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.8 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182377": {
+                "name": "Корпус для компьютера Winard 5813 mATX USB/AU",
+                "brand_name": "Winard",
+                "price": 2180,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-5813-matx-usb-au-4182377",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.06 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "400000366": {
+                "name": "Корпус для компьютера Ginzzu SL180 боковое окно, ATX",
+                "brand_name": "Ginzzu",
+                "price": 4020,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-sl180-bokovoe-okno-atx-400000366",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "2.6 кг",
+                "material": "акрил/ металл",
+                "color": "черный"
+            },
+            "4182362": {
+                "name": "Корпус для компьютера Ginzzu CL300 FAN 12CM RGBх4 USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 7190,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl300-fan-12cm-rgbh4-usb30-window-4182362",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "1",
+                "weight": "5.5 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182326": {
+                "name": "Корпус для компьютера Ginzzu D400 RGB",
+                "brand_name": "Ginzzu",
+                "price": 2560,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d400-rgb-4182326",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.2 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182407": {
+                "name": "Корпус для компьютера Winard 5826 mATX USB3.0х2, USB2.0х2",
+                "brand_name": "Winard",
+                "price": 2690,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-5826-matx-usb30h2-usb20h2-4182407",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "2",
+                "weight": "2.2 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182408": {
+                "name": "Корпус для компьютера Winard 3065 USB3.0х2, USB2.0х2",
+                "brand_name": "Winard",
+                "price": 2820,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-3065-usb30h2-usb20h2-4182408",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "5",
+                "usb_3_0": "2",
+                "weight": "2.3 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182360": {
+                "name": "Корпус для компьютера Ginzzu CL250 FAN 20CM RGBх2 USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 6700,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl250-fan-20cm-rgbh2-usb30-window-4182360",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.8 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182376": {
+                "name": "Корпус для компьютера Winard 1570 (300 W) mITX",
+                "brand_name": "Winard",
+                "price": 4230,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-1570-300-w-mitx-4182376",
+                "size_properties": {
+                    "size": "DeskTop",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "2.65 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "4182329": {
+                "name": "Корпус для компьютера Ginzzu A200 USB3.0",
+                "brand_name": "Ginzzu",
+                "price": 2680,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-a200-usb30-4182329",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "2.5 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182340": {
+                "name": "Корпус для компьютера Ginzzu A220 White",
+                "brand_name": "Ginzzu",
+                "price": 2680,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-a220-white-4182340",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.5 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "4182323": {
+                "name": "Корпус для компьютера Ginzzu D350 RGB",
+                "brand_name": "Ginzzu",
+                "price": 2560,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d350-rgb-4182323",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.2 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "400004379": {
+                "name": "Корпус для компьютера Ginzzu B180 (450 12см)",
+                "brand_name": "Ginzzu",
+                "price": 3170,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b180-450-12sm-400004379",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "4182355": {
+                "name": "Корпус для компьютера Ginzzu CL220 White FAN 12LED USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 5480,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl220-white-fan-12led-usb30-window-4182355",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.2 кг",
+                "material": "сталь",
+                "color": "белый"
+            },
+            "400004388": {
+                "name": "Корпус для компьютера Ginzzu D180 (450 12см)",
+                "brand_name": "Ginzzu",
+                "price": 3290,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-d180-450-12sm-400004388",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "4 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400004393": {
+                "name": "Корпус для компьютера Ginzzu B180 (450)",
+                "brand_name": "Ginzzu",
+                "price": 3050,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b180-450-400004393",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400004391": {
+                "name": "Корпус для компьютера Ginzzu B190 (450 12см)",
+                "brand_name": "Ginzzu",
+                "price": 3170,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b190-450-12sm-400004391",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400004383": {
+                "name": "Корпус для компьютера Ginzzu B190 (450)",
+                "brand_name": "Ginzzu",
+                "price": 3050,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b190-450-400004383",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400004387": {
+                "name": "Корпус для компьютера Ginzzu B180 (400)",
+                "brand_name": "Ginzzu",
+                "price": 2920,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b180-400-400004387",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400004386": {
+                "name": "Корпус для компьютера Ginzzu B190 (400)",
+                "brand_name": "Ginzzu",
+                "price": 2920,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-b190-400-400004386",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "3 кг",
+                "material": "пластик/ металл",
+                "color": "черный"
+            },
+            "400089009": {
+                "name": "Корпус для компьютера Ginzzu GL180",
+                "brand_name": "Ginzzu",
+                "price": 5360,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-gl180-400089009",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.2 кг",
+                "material": "стекло/ металл/ пластик",
+                "color": "черный"
+            },
+            "400042557": {
+                "name": "Корпус для компьютера Aerocool Cylon White",
+                "brand_name": "Aerocool",
+                "price": 5990,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-aerocool-cylon-white-400042557",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "3.8 кг",
+                "material": "металл",
+                "color": "белый"
+            },
+            "400042555": {
+                "name": "Корпус для компьютера Aerocool Aero Playa Slim Black",
+                "brand_name": "Aerocool",
+                "price": 5270,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-aerocool-aero-playa-slim-black-400042555",
+                "size_properties": {
+                    "size": "DeskTop",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "2",
+                "weight": "2.6 кг",
+                "material": "металл",
+                "color": "черный"
+            },
+            "400102611": {
+                "name": "Корпус для компьютера Cooler Master MasterBox Q300L",
+                "brand_name": "Cooler Master",
+                "price": 7310,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-cooler-master-masterbox-q300l-400102611",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "1",
+                "usb_3_0": "-",
+                "weight": "5 кг",
+                "material": "металл",
+                "color": "черный"
+            },
+            "400102111": {
+                "name": "Корпус для компьютера Cooler Master MasterBox NR200P",
+                "brand_name": "Cooler Master",
+                "price": 14190,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-cooler-master-masterbox-nr200p-400102111",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "5 кг",
+                "material": "сталь/ стекло",
+                "color": "белый"
+            },
+            "4182379": {
+                "name": "Корпус для компьютера Winard 5825 mATX USB3.0 /AU",
+                "brand_name": "Winard",
+                "price": 2440,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-5825-matx-usb30--au-4182379",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "1",
+                "weight": "2.05 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "4182383": {
+                "name": "Корпус для компьютера Winard 3067 USB/AU",
+                "brand_name": "Winard",
+                "price": 2310,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-3067-usb-au-4182383",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "-",
+                "weight": "2.34 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "4182380": {
+                "name": "Корпус для компьютера Winard 3010 USB/AU",
+                "brand_name": "Winard",
+                "price": 2310,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-3010-usb-au-4182380",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "4",
+                "usb_3_0": "-",
+                "weight": "2.25 кг",
+                "material": "сталь/ пластик",
+                "color": "черный"
+            },
+            "4182354": {
+                "name": "Корпус для компьютера Ginzzu CL200 FAN 12LED USB3.0 Window",
+                "brand_name": "Ginzzu",
+                "price": 5360,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-ginzzu-cl200-fan-12led-usb30-window-4182354",
+                "size_properties": {
+                    "size": "Midi-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX",
+                        "ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "1",
+                "weight": "5.2 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "4182406": {
+                "name": "Корпус для компьютера Winard 5822 mATX USB/AU",
+                "brand_name": "Winard",
+                "price": 2180,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-winard-5822-matx-usb-au-4182406",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "2",
+                "usb_3_0": "-",
+                "weight": "2.65 кг",
+                "material": "сталь",
+                "color": "черный"
+            },
+            "400032355": {
+                "name": "Корпус для компьютера Aerocool QS-240",
+                "brand_name": "Aerocool",
+                "price": 4630,
+                "link": "https://www.mvideo.ru/products/korpus-dlya-komputera-aerocool-qs-240-400032355",
+                "size_properties": {
+                    "size": "Mini-Tower",
+                    "suitable_motherboards": [
+                        "Mini-ITX",
+                        "Micro-ATX"
+                    ]
+                },
+                "3_5": "3",
+                "usb_3_0": "1",
+                "weight": "5 кг",
+                "material": "металл",
+                "color": "черный"
+            }
+        }
+    },
+    "7927": {
+        "categoryName": "Кулеры для процессоров",
+        "data": {
+            "30046630": {
+                "name": "Кулер для процессора Cooler Master G100M",
+                "brand_name": "Cooler Master",
+                "price": 2999,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-cooler-master-g100m-30046630",
+                "max_power_dissipation": "130 Вт",
+                "height": "74.5 мм",
+                "fans": "1",
+                "noise": "9-30 дБ"
+            },
+            "30058597": {
+                "name": "Кулер для процессора Abkoncore CT408B",
+                "brand_name": "Abkoncore",
+                "price": 3299,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-abkoncore-ct408b-30058597",
+                "max_power_dissipation": "150 Вт",
+                "height": "157 мм",
+                "fans": "1",
+                "noise": "33 дБ"
+            },
+            "30032056": {
+                "name": "Кулер для процессора Cooler Master Hyper 412S",
+                "brand_name": "Cooler Master",
+                "price": 3699,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-cooler-master-hyper-412s-30032056",
+                "max_power_dissipation": "150 Вт",
+                "height": "160 мм",
+                "fans": "1",
+                "noise": "-"
+            },
+            "400066571": {
+                "name": "Кулер для процессора Deepcool GAMMAXX 300 FURY",
+                "brand_name": "Deepcool",
+                "price": 2340,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-gammaxx-300-fury-400066571",
+                "max_power_dissipation": "130 Вт",
+                "height": "-",
+                "fans": "1",
+                "noise": "21 дБ"
+            },
+            "400088898": {
+                "name": "Кулер для процессора Deepcool Gamma Hunter",
+                "brand_name": "Deepcool",
+                "price": 970,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-gamma-hunter-400088898",
+                "max_power_dissipation": "95 Вт",
+                "height": "63.5 мм",
+                "fans": "1",
+                "noise": "18-21 дБ"
+            },
+            "400066573": {
+                "name": "Кулер для процессора Deepcool ICE EDGE MINI FS V2.0",
+                "brand_name": "Deepcool",
+                "price": 1340,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-ice-edge-mini-fs-v20-400066573",
+                "max_power_dissipation": "100 Вт",
+                "height": "-",
+                "fans": "1",
+                "noise": "24.7 дБ"
+            },
+            "400128083": {
+                "name": "Кулер для процессора ID-Cooling SE-214-XT ARGB",
+                "brand_name": "ID-Cooling",
+                "price": 2380,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-214-xt-argb-400128083",
+                "max_power_dissipation": "70 Вт",
+                "height": "120 мм",
+                "fans": "1",
+                "noise": "13.8-30.5 дБ"
+            },
+            "400141928": {
+                "name": "Кулер для процессора ID-Cooling SE-214-XT",
+                "brand_name": "ID-Cooling",
+                "price": 2450,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-214-xt-400141928",
+                "max_power_dissipation": "180 Вт",
+                "height": "150 мм",
+                "fans": "1",
+                "noise": "30.5 дБ"
+            },
+            "400141913": {
+                "name": "Кулер для процессора Deepcool THETA 20 PWM Soc-1700",
+                "brand_name": "Deepcool",
+                "price": 970,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-theta-20-pwm-soc-1700-400141913",
+                "max_power_dissipation": "95 Вт",
+                "height": "60 мм",
+                "fans": "1",
+                "noise": "32.5 дБ"
+            },
+            "400071917": {
+                "name": "Кулер для процессора Deepcool NEPTWIN V3",
+                "brand_name": "Deepcool",
+                "price": 6510,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-neptwin-v3-400071917",
+                "max_power_dissipation": "2.64 Вт",
+                "height": "158 мм",
+                "fans": "2",
+                "noise": "10-27 дБ"
+            },
+            "400071518": {
+                "name": "Кулер для процессора Deepcool GAMMAXX S40 Soc-AM4",
+                "brand_name": "Deepcool",
+                "price": 3170,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-gammaxx-s40-soc-am4-400071518",
+                "max_power_dissipation": "130 Вт",
+                "height": "-",
+                "fans": "-",
+                "noise": "26.1 дБ"
+            },
+            "400066565": {
+                "name": "Кулер для процессора Aerocool Cylon 4",
+                "brand_name": "Aerocool",
+                "price": 4040,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-aerocool-cylon-4-400066565",
+                "max_power_dissipation": "145 Вт",
+                "height": "-",
+                "fans": "1",
+                "noise": "26 дБ"
+            },
+            "400066570": {
+                "name": "Кулер для процессора Deepcool GAMMAXX 200 V2",
+                "brand_name": "Deepcool",
+                "price": 1890,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-gammaxx-200-v2-400066570",
+                "max_power_dissipation": "100 Вт",
+                "height": "-",
+                "fans": "1",
+                "noise": "24 дБ"
+            },
+            "400128081": {
+                "name": "Кулер для процессора Deepcool ICE BLADE 100 PWM",
+                "brand_name": "Deepcool",
+                "price": 1260,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-ice-blade-100-pwm-400128081",
+                "max_power_dissipation": "40 Вт",
+                "height": "92 мм",
+                "fans": "1",
+                "noise": "15-31.6 дБ"
+            },
+            "400128082": {
+                "name": "Кулер для процессора Deepcool Theta 31 PWM",
+                "brand_name": "Deepcool",
+                "price": 1320,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-deepcool-theta-31-pwm-400128082",
+                "max_power_dissipation": "40 Вт",
+                "height": "100 мм",
+                "fans": "1",
+                "noise": "17.8-32.5 дБ"
+            },
+            "400088904": {
+                "name": "Кулер для процессора Zalman CNPS10X Performa White",
+                "brand_name": "Zalman",
+                "price": 5480,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-zalman-cnps10x-performa-white-400088904",
+                "max_power_dissipation": "180 Вт",
+                "height": "155 мм",
+                "fans": "1",
+                "noise": "27 дБ"
+            },
+            "400141971": {
+                "name": "Кулер для процессора Zalman Optima II CNPS10X",
+                "brand_name": "Zalman",
+                "price": 4120,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-zalman-optima-ii-cnps10x-400141971",
+                "max_power_dissipation": "180 Вт",
+                "height": "158 мм",
+                "fans": "1",
+                "noise": "17-27 дБ"
+            },
+            "400141967": {
+                "name": "Кулер для процессора ID-Cooling SE-226-XT",
+                "brand_name": "ID-Cooling",
+                "price": 5090,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-226-xt-400141967",
+                "max_power_dissipation": "250 Вт",
+                "height": "154 мм",
+                "fans": "1",
+                "noise": "31.5 дБ"
+            },
+            "400141966": {
+                "name": "Кулер для процессора ID-Cooling SE-225-XT Black",
+                "brand_name": "ID-Cooling",
+                "price": 3620,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-225-xt-black-400141966",
+                "max_power_dissipation": "220 Вт",
+                "height": "154 мм",
+                "fans": "2",
+                "noise": "35.2 дБ"
+            },
+            "400141923": {
+                "name": "Кулер для процессора ID-Cooling SE-207-XT Slim",
+                "brand_name": "ID-Cooling",
+                "price": 4690,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-207-xt-slim-400141923",
+                "max_power_dissipation": "220 Вт",
+                "height": "135 мм",
+                "fans": "1",
+                "noise": "35.2 дБ"
+            },
+            "400141944": {
+                "name": "Кулер для процессора ID-Cooling SE-224-XTS",
+                "brand_name": "ID-Cooling",
+                "price": 2700,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-224-xts-400141944",
+                "max_power_dissipation": "180 Вт",
+                "height": "154 мм",
+                "fans": "1",
+                "noise": "31.5 дБ"
+            },
+            "400141941": {
+                "name": "Кулер для процессора ID-Cooling SE-224-XTS",
+                "brand_name": "ID-Cooling",
+                "price": 3060,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-id-cooling-se-224-xts-400141941",
+                "max_power_dissipation": "180 Вт",
+                "height": "154 мм",
+                "fans": "1",
+                "noise": "31.5 дБ"
+            },
+            "400145596": {
+                "name": "Кулер для процессора Aerocool Cylon 3 ARGB",
+                "brand_name": "Aerocool",
+                "price": 3450,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-aerocool-cylon-3-argb-400145596",
+                "max_power_dissipation": "40 Вт",
+                "height": "126 мм",
+                "fans": "1",
+                "noise": "22-24.3 дБ"
+            },
+            "400083226": {
+                "name": "Кулер для процессора Cooler Master RR-2V2E-18PK-R2",
+                "brand_name": "Cooler Master",
+                "price": 5010,
+                "link": "https://www.mvideo.ru/products/kuler-dlya-processora-cooler-master-rr-2v2e-18pk-r2-400083226",
+                "max_power_dissipation": "150 Вт",
+                "height": "155 мм",
+                "fans": "1",
+                "noise": "8-27 дБ"
             }
         }
     }
