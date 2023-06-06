@@ -187,8 +187,9 @@ def getInfoForProcessors():
                                           "heat": product_heat}
 
     # Добавление полученных данных в общий словарь (не обновляет JSON файл)
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": processorsData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": processorsData}
 
 
 # Функция получает детализированные данные для видеокарт
@@ -245,8 +246,9 @@ def getInfoForVideoCards():
                                           "HDMI": product_HDMI,
                                           "DP": product_DP,
                                           "recommended_power": product_recommended_power}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": videocardsData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": videocardsData}
 
 
 # Функция получает детализированные данные для жестких дисков
@@ -255,6 +257,7 @@ def getInfoForMemory():
     categotyID = "5436"
     categoryName = "Жесткие диски"
     memoryData = {"HDD": {}, "SSD_m2": {}, "SSD_usual": {}}
+    HDD_ids, SSD_m2_ids, SSD_usual_ids = [], [], []
 
     ids, properties_response, prices = getData(categotyID)
 
@@ -296,6 +299,7 @@ def getInfoForMemory():
                                                  "form_factor": product_form_factor,
                                                  "spin_speed": product_spin_speed,
                                                  "buffer_memory": product_buffer_memory}
+                HDD_ids.append(product_id)
             elif product["category"]["name"] == "SSD":
                 for temp_string in product_name.split():
                     if "tb" in temp_string.lower() or "gb" in temp_string.lower():
@@ -316,8 +320,10 @@ def getInfoForMemory():
                         product_form_factor = property["value"]
                 if "M.2" in product_form_factor:
                     tag = "SSD_m2"
+                    SSD_m2_ids.append(product_id)
                 else:
                     tag = "SSD_usual"
+                    SSD_usual_ids.append(product_id)
                 memoryData[tag][product_id] = {"name": product_name,
                                                "brand_name": product_brand_name,
                                                "price": prices[product_id]["price"],
@@ -328,8 +334,11 @@ def getInfoForMemory():
                                                "flash_memory_type": product_flash_memory_type,
                                                "max_read_speed": product_max_read_speed,
                                                "max_write_speed": product_max_write_speed}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": memoryData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "HDD_ids": HDD_ids,
+                                     "SSD_m2_ids": SSD_m2_ids,
+                                     "SSD_usual_ids": SSD_usual_ids,
+                                     "data": memoryData}
 
 
 # Функция получает детализированные данные для оперативной памяти
@@ -338,6 +347,7 @@ def getInfoForRAM():
     categotyID = "5433"
     categoryName = "Оперативная память"
     RAMData = {"DDR3": {}, "DDR4": {}, "DDR5": {}}
+    DDR3_ids, DDR4_ids, DDR5_ids = [], [], []
 
     ids, properties_response, prices = getData(categotyID)
     for properties_response_part in properties_response:
@@ -352,10 +362,13 @@ def getInfoForRAM():
                 if "ddr" in temp_string.lower():
                     if "ddr3" in temp_string.lower():
                         product_type = "DDR3"
+                        DDR3_ids.append(product_id)
                     elif "ddr4" in temp_string.lower():
                         product_type = "DDR4"
+                        DDR4_ids.append(product_id)
                     elif "ddr5" in temp_string.lower():
                         product_type = "DDR5"
+                        DDR5_ids.append(product_id)
             if product_type == "-":  # Есть сломанные товары, где не указан тип памяти, их мы игнорируем
                 continue
 
@@ -391,8 +404,11 @@ def getInfoForRAM():
                                                  "product_memory_frequency": product_memory_frequency,
                                                  "product_form_factor": product_form_factor,
                                                  "product_throughput": product_throughput}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": RAMData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "DDR3_ids": DDR3_ids,
+                                     "DDR4_ids": DDR4_ids,
+                                     "DDR5_ids": DDR5_ids,
+                                     "data": RAMData}
 
 
 # Функция получает детализированные данные для материнских плат
@@ -470,8 +486,9 @@ def getInfoForMotherBoards():
                                             "bluetooth": product_bluetooth,
                                             "hdmi": product_hdmi,
                                             "dp": product_dp}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": MotherBoardsData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": MotherBoardsData}
 
 
 # Функция получает детализированные данные для блоков питания
@@ -514,8 +531,9 @@ def getInfoForPower():
                                      "standard": product_standard,
                                      "overload_protection": product_overload_protection,
                                      "surge_protection": product_surge_protection}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": PowerData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": PowerData}
 
 
 # Функция получает детализированные данные для корпусов
@@ -577,8 +595,9 @@ def getInfoForBody():
                                     "weight": product_weight,
                                     "material": product_material,
                                     "color": product_color}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": BodyData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": BodyData}
 
 
 # Функция получает детализированные данные для процессорных кулеров
@@ -624,8 +643,9 @@ def getInfoForProcessorCoolers():
                                                 "height": product_height,
                                                 "fans": product_fans,
                                                 "noise": product_noise}
-    DATA_DICTIONARY[categotyID] = {"categoryName": categoryName,
-                                   "data": ProcessorCoolersData}
+    DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
+                                     "productIDs": ids,
+                                     "data": ProcessorCoolersData}
 
 
 # Функция обновляет JSON файл с данными
