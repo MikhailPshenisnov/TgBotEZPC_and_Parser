@@ -68,16 +68,51 @@ namespace TGBotEZPC
                 var message = update.Message;
                 if (message.Text != null)
                 {
-                    if (message.Text.ToLower() == "/start")
+                    string curUser = message.Chat.Id.ToString();
+                    if (_usersData.ContainsKey(curUser))
                     {
-                        await botClient.SendTextMessageAsync(message.Chat.Id, "Привет, человек!");
-                        return;
-                    }
+                        if (message.Text == "/start")
+                        {
+                            _usersData[curUser] = new Dictionary<string, string>()
+                                { { "name", "Bob" }, { "summa", "mnogo deneg" }, { "step", "1" } };
+                            await botClient.SendTextMessageAsync(message.Chat.Id,
+                                $"Давайте начнем! Введите 1, 2 или 3");
+                        }
+                        else if ((_usersData[curUser]["step"] == "1") &&
+                                 (message.Text == "1" | message.Text == "2" | message.Text == "3"))
+                        {
+                            await botClient.SendTextMessageAsync(message.Chat.Id,
+                                $"А я вас знаю, вы {_usersData[curUser]["name"]}");
+                            Console.WriteLine(_usersData);
 
-                    await botClient.SendTextMessageAsync(message.Chat.Id, "Дада, я тут");
+                            
+                            await botClient.SendTextMessageAsync(message.Chat.Id,
+                                $"Сейчас я вас забуду");
+                            _usersData.Remove(curUser);
+                            Console.WriteLine(_usersData);
+                        }
+                    }
+                    else
+                    {
+                        if (message.Text == "/start")
+                        {
+                            _usersData.Add(key: curUser,
+                                value: new Dictionary<string, string>()
+                                    { { "name", "Bob" }, { "summa", "mnogo deneg" }, { "step", "1" } });
+                            await botClient.SendTextMessageAsync(message.Chat.Id,
+                                $"Давайте начнем! Введите 1, 2 или 3");
+                        }
+                        else
+                        {
+                            await botClient.SendTextMessageAsync(message.Chat.Id,
+                                $"Здравствуйте, я - бот по подбору комплектующих для ПК.\n " +
+                                $"Для начала напишите /start");
+                        }
+                    }
                 }
             }
         }
+
 
         // Обработчик ошибок бота
         private async static Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception,
