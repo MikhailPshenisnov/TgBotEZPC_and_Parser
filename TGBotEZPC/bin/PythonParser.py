@@ -350,6 +350,8 @@ def getInfoForRAM():
     DDR3_ids, DDR4_ids, DDR5_ids = [], [], []
 
     ids, properties_response, prices = getData(categotyID)
+    extra_ids = []
+
     for properties_response_part in properties_response:
         for product in properties_response_part:
             product_id = product["productId"]
@@ -370,6 +372,7 @@ def getInfoForRAM():
                         product_type = "DDR5"
                         DDR5_ids.append(product_id)
             if product_type == "-":  # Есть сломанные товары, где не указан тип памяти, их мы игнорируем
+                extra_ids.append(product_id)
                 continue
 
             product_module_memory = "-"
@@ -404,6 +407,8 @@ def getInfoForRAM():
                                                  "product_memory_frequency": product_memory_frequency,
                                                  "product_form_factor": product_form_factor,
                                                  "product_throughput": product_throughput}
+    for i in extra_ids:
+        ids.remove(i)
     DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
                                      "DDR3_ids": DDR3_ids,
                                      "DDR4_ids": DDR4_ids,
@@ -549,6 +554,7 @@ def getInfoForBody():
              "DeskTop": ["Mini-ITX", "Micro-ATX", "ATX"]}
 
     ids, properties_response, prices = getData(categotyID)
+    extra_ids = []
 
     for properties_response_part in properties_response:
         for product in properties_response_part:
@@ -580,6 +586,7 @@ def getInfoForBody():
                     product_color = property['value']
 
             if product_size == "-":
+                extra_ids.append(product_id)
                 continue
             else:
                 product_size_properties = {"size": product_size,
@@ -595,6 +602,8 @@ def getInfoForBody():
                                     "weight": product_weight,
                                     "material": product_material,
                                     "color": product_color}
+    for i in extra_ids:
+        ids.remove(i)
     DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
                                      "productIDs": ids,
                                      "data": BodyData}
@@ -608,6 +617,7 @@ def getInfoForProcessorCoolers():
     ProcessorCoolersData = {}
 
     ids, properties_response, prices = getData(categotyID)
+    extra_ids = []
 
     for properties_response_part in properties_response:
         for product in properties_response_part:
@@ -632,7 +642,8 @@ def getInfoForProcessorCoolers():
                 elif property["name"] == "Уровень шума":
                     product_noise = property['value']
 
-            if product_max_power_dissipation == "-":
+            if product_max_power_dissipation == "-" or "." in product_max_power_dissipation:
+                extra_ids.append(product_id)
                 continue
 
             ProcessorCoolersData[product_id] = {"name": product_name,
@@ -643,6 +654,8 @@ def getInfoForProcessorCoolers():
                                                 "height": product_height,
                                                 "fans": product_fans,
                                                 "noise": product_noise}
+    for i in extra_ids:
+        ids.remove(i)
     DATA_DICTIONARY[categoryName] = {"categoryId": categotyID,
                                      "productIDs": ids,
                                      "data": ProcessorCoolersData}

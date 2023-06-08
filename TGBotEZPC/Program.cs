@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Text.Json.Nodes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -33,7 +34,21 @@ namespace TGBotEZPC
         private static JArray _bodyIdsArray;
         private static JArray _coolersIdsArray;
 
-        // Данные для каждого пользователя
+        // Данные о процентном соотношении комплектующих
+        private static Dictionary<string, double> _percentage = new Dictionary<string, double>()
+        {
+            { "Процессор", 0.179 },
+            { "Материнская плата", 0.1297 },
+            { "Видеокарта", 0.3592 },
+            { "Кулер", 0.0309 },
+            { "Оперативная память", 0.0533 },
+            { "Блок питания", 0.0717 },
+            { "HDD", 0.0434 },
+            { "SSD", 0.0618 },
+            { "Корпус", 0.071 }
+        };
+
+        // Словарь для данных для каждого пользователя
         private static Dictionary<string, Dictionary<string, string>> _usersData =
             new Dictionary<string, Dictionary<string, string>>();
 
@@ -54,63 +69,630 @@ namespace TGBotEZPC
                 AllowedUpdates = { },
             };
 
+            // Запуск отловщика событий
             _bot.StartReceiving(HandleUpdateAsync, HandleErrorAsync, receiverOptions, cancellationToken);
 
             Console.ReadLine();
         }
 
+        // Отловщик событий Telegram бота, здесь используется как отловщик сообщений
         private static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update,
             CancellationToken cancellationToken)
         {
+            // Вывод данных о полученом сообщении, полезно для дебага, не влияет на работу программы
             Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(update));
+
+            string hint;
+
             if (update.Type == Telegram.Bot.Types.Enums.UpdateType.Message)
             {
                 var message = update.Message;
+
                 if (message.Text != null)
                 {
+                    // Получаем информацию о текущем пользователе
                     string curUser = message.Chat.Id.ToString();
+
+                    // Если пользователь есть в словаре, то действуем исходя из шага, на котором сейчас пользователь
                     if (_usersData.ContainsKey(curUser))
                     {
+                        string newMessageText;
+
                         if (message.Text == "/start")
                         {
-                            _usersData[curUser] = new Dictionary<string, string>()
-                                { { "name", "Bob" }, { "summa", "mnogo deneg" }, { "step", "1" } };
-                            await botClient.SendTextMessageAsync(message.Chat.Id,
-                                $"Давайте начнем! Введите 1, 2 или 3");
-                        }
-                        else if ((_usersData[curUser]["step"] == "1") &&
-                                 (message.Text == "1" | message.Text == "2" | message.Text == "3"))
-                        {
-                            await botClient.SendTextMessageAsync(message.Chat.Id,
-                                $"А я вас знаю, вы {_usersData[curUser]["name"]}");
-                            Console.WriteLine(_usersData);
+                            _usersData[curUser] = GetEmptyUserDictionary();
 
-                            
-                            await botClient.SendTextMessageAsync(message.Chat.Id,
-                                $"Сейчас я вас забуду");
-                            _usersData.Remove(curUser);
-                            Console.WriteLine(_usersData);
+                            newMessageText = $"Давайте начнём заново. Для начала введите " +
+                                             $"желаемую стоимость вашей сборки (в рублях)";
+                            await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                        }
+                        else if (_usersData[curUser]["step"] == "0")
+                        {
+                            hint = $"Напишите стоимость сборки в рублях, числом, без дополнительных символов";
+
+                            if (int.TryParse(message.Text, out var inputSumma))
+                            {
+                                _usersData[curUser]["summa"] = inputSumma.ToString();
+                                _usersData[curUser]["step"] = "1";
+
+                                newMessageText = $"Замечательно, теперь перейдем к выбору процессора. " +
+                                                 $"Напишите 1, если вам необходим процессор Intel, или " +
+                                                 $"напишите 2, если вам нужен процессор от AMD.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "1")
+                        {
+                            hint = $"Напишите 1, если вам необходим процессор Intel, или " +
+                                   $"напишите 2, если вам нужен процессор от AMD.";
+
+                            var processorPrice = double.Parse(_usersData[curUser]["summa"]) * _percentage["Процессор"];
+                            var processors = new List<string>();
+
+                            if (message.Text == "1")
+                            {
+                                _usersData[curUser]["processor_brand"] = "Intel";
+                            }
+                            else if (message.Text == "2")
+                            {
+                                _usersData[curUser]["processor_brand"] = "AMD";
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                                return;
+                            }
+
+                            foreach (var processorId in _processorsIdsArray)
+                            {
+                                if (_jsonFile["Процессоры"]["data"][processorId.ToString()]["brand_name"]
+                                        .ToString() == _usersData[curUser]["processor_brand"] &&
+                                    Math.Abs(int.Parse(
+                                        _jsonFile["Процессоры"]["data"][processorId.ToString()]["price"]
+                                            .ToString()) - processorPrice) <= 2500)
+                                {
+                                    processors.Add(processorId.ToString());
+                                }
+                            }
+
+                            if (processors.Count != 0)
+                            {
+                                _usersData[curUser]["step"] = "2";
+                                _usersData[curUser]["possible_processors"] = string.Join(';', processors);
+
+
+                                newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                for (int i = 0; i < processors.Count; i++)
+                                {
+                                    newMessageText +=
+                                        $"{i + 1} - {_jsonFile["Процессоры"]["data"][processors[i]]["name"].ToString()} " +
+                                        $"- {_jsonFile["Процессоры"]["data"][processors[i]]["price"].ToString()} Руб.\n" +
+                                        $"Ссылка: {_jsonFile["Процессоры"]["data"][processors[i]]["link"].ToString()}\n" +
+                                        $"\n";
+                                }
+
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                            }
+                            else
+                            {
+                                newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                 $"сбалансированную сборку по данной цене. " +
+                                                 $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                _usersData.Remove(curUser);
+
+                                newMessageText = $"Для начала напишите /start";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "2")
+                        {
+                            var processors = new List<string>(_usersData[curUser]["possible_processors"].Split(';'));
+
+                            hint = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                            for (int i = 0; i < processors.Count; i++)
+                            {
+                                hint +=
+                                    $"{i + 1} - {_jsonFile["Процессоры"]["data"][processors[i]]["name"].ToString()} " +
+                                    $"- {_jsonFile["Процессоры"]["data"][processors[i]]["price"].ToString()} Руб.\n" +
+                                    $"Ссылка: {_jsonFile["Процессоры"]["data"][processors[i]]["link"].ToString()}\n" +
+                                    $"\n";
+                            }
+
+                            if (int.TryParse(message.Text, out var processorInd) &&
+                                (1 <= processorInd && processorInd <= processors.Count))
+                            {
+                                _usersData[curUser]["processor"] = processors[processorInd - 1];
+
+                                newMessageText = $"Процессор выбран - переходим к материнской плате";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                var motherboards = new List<string>();
+                                var motherboardPrice = double.Parse(_usersData[curUser]["summa"]) *
+                                                       _percentage["Материнская плата"];
+                                foreach (var motherboardId in _motherboardIdsArray)
+                                {
+                                    if (_jsonFile["Материнские платы"]["data"][motherboardId.ToString()]["socket"]
+                                            .ToString() ==
+                                        _jsonFile["Процессоры"]["data"][_usersData[curUser]["processor"]]["socket"]
+                                            .ToString() &&
+                                        Math.Abs(int.Parse(
+                                            _jsonFile["Материнские платы"]["data"][motherboardId.ToString()]["price"]
+                                                .ToString()) - motherboardPrice) <= 2500)
+                                    {
+                                        motherboards.Add(motherboardId.ToString());
+                                    }
+                                }
+
+                                if (motherboards.Count != 0)
+                                {
+                                    _usersData[curUser]["step"] = "3";
+                                    _usersData[curUser]["possible_motherboards"] = string.Join(';', motherboards);
+
+                                    newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                    newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                    for (int i = 0; i < motherboards.Count; i++)
+                                    {
+                                        newMessageText +=
+                                            $"{i + 1} - {_jsonFile["Материнские платы"]["data"][motherboards[i]]["name"].ToString()} " +
+                                            $"- {_jsonFile["Материнские платы"]["data"][motherboards[i]]["price"].ToString()} Руб.\n" +
+                                            $"Ссылка: {_jsonFile["Материнские платы"]["data"][motherboards[i]]["link"].ToString()}\n" +
+                                            $"\n";
+                                    }
+
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                                else
+                                {
+                                    newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                     $"сбалансированную сборку по данной цене. " +
+                                                     $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                    _usersData.Remove(curUser);
+
+                                    newMessageText = $"Для начала напишите /start";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "3")
+                        {
+                            var motherboards =
+                                new List<string>(_usersData[curUser]["possible_motherboards"].Split(';'));
+
+                            hint = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                            for (int i = 0; i < motherboards.Count; i++)
+                            {
+                                hint +=
+                                    $"{i + 1} - {_jsonFile["Материнские платы"]["data"][motherboards[i]]["name"].ToString()} " +
+                                    $"- {_jsonFile["Материнские платы"]["data"][motherboards[i]]["price"].ToString()} Руб.\n" +
+                                    $"Ссылка: {_jsonFile["Материнские платы"]["data"][motherboards[i]]["link"].ToString()}\n" +
+                                    $"\n";
+                            }
+
+                            if (int.TryParse(message.Text, out var motherboardInd) &&
+                                (1 <= motherboardInd && motherboardInd <= motherboards.Count))
+                            {
+                                _usersData[curUser]["motherboard"] = motherboards[motherboardInd - 1];
+
+                                newMessageText = $"С материнской платой закончили, дальше будем выбирать видеокарту";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                var videocards = new List<string>();
+                                var videocardPrice = double.Parse(_usersData[curUser]["summa"]) *
+                                                     _percentage["Видеокарта"];
+                                foreach (var videocardsId in _videocardsIdsArray)
+                                {
+                                    if (Math.Abs(int.Parse(
+                                            _jsonFile["Видеокарты"]["data"][videocardsId.ToString()]["price"]
+                                                .ToString()) - videocardPrice) <= 3000)
+                                    {
+                                        videocards.Add(videocardsId.ToString());
+                                    }
+                                }
+
+                                if (videocards.Count != 0)
+                                {
+                                    _usersData[curUser]["step"] = "4";
+                                    _usersData[curUser]["possible_videocards"] = string.Join(';', videocards);
+
+                                    newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                    newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                    for (int i = 0; i < videocards.Count; i++)
+                                    {
+                                        newMessageText +=
+                                            $"{i + 1} - {_jsonFile["Видеокарты"]["data"][videocards[i]]["name"].ToString()} " +
+                                            $"- {_jsonFile["Видеокарты"]["data"][videocards[i]]["price"].ToString()} Руб.\n" +
+                                            $"Ссылка: {_jsonFile["Видеокарты"]["data"][videocards[i]]["link"].ToString()}\n" +
+                                            $"\n";
+                                    }
+
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                                else
+                                {
+                                    newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                     $"сбалансированную сборку по данной цене. " +
+                                                     $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                    _usersData.Remove(curUser);
+
+                                    newMessageText = $"Для начала напишите /start";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "4")
+                        {
+                            var videocards = new List<string>(_usersData[curUser]["possible_videocards"].Split(';'));
+
+                            hint = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                            for (int i = 0; i < videocards.Count; i++)
+                            {
+                                hint +=
+                                    $"{i + 1} - {_jsonFile["Видеокарты"]["data"][videocards[i]]["name"].ToString()} " +
+                                    $"- {_jsonFile["Видеокарты"]["data"][videocards[i]]["price"].ToString()} Руб.\n" +
+                                    $"Ссылка: {_jsonFile["Видеокарты"]["data"][videocards[i]]["link"].ToString()}\n" +
+                                    $"\n";
+                            }
+
+                            if (int.TryParse(message.Text, out var videocardsInd) &&
+                                (1 <= videocardsInd && videocardsInd <= videocards.Count))
+                            {
+                                _usersData[curUser]["videocard"] = videocards[videocardsInd - 1];
+
+                                newMessageText = $"Переходим к выбору оперативной памяти. Выберите модель, и " +
+                                                 $"я добавлю в вашу сборку 2 таких плашки, это оптимальное количество, " +
+                                                 $"ведь у вас еще останутся свободные слоты, если вы захотите улучшить ваш ПК";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                var ram = new List<string>();
+                                var ramPrice = double.Parse(_usersData[curUser]["summa"]) *
+                                    _percentage["Оперативная память"] / 2;
+                                string ramType =
+                                    _jsonFile["Материнские платы"]["data"][_usersData[curUser]["motherboard"]][
+                                        "memory_type"].ToString();
+
+                                var tmpArray = new JArray();
+                                switch (ramType)
+                                {
+                                    case "DDR3":
+                                        tmpArray = _ramDdr3IdsArray;
+                                        break;
+                                    case "DDR4":
+                                        tmpArray = _ramDdr4IdsArray;
+                                        break;
+                                    case "DDR5":
+                                        tmpArray = _ramDdr5IdsArray;
+                                        break;
+                                }
+
+                                foreach (var ramId in tmpArray)
+                                {   
+                                    try
+                                    {
+                                        var test = _jsonFile["Оперативная память"]["data"][ramType][ramId.ToString()];
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        continue;
+                                    }
+                                    if (_jsonFile["Оперативная память"]["data"][ramType][ramId.ToString()][
+                                            "product_number_of_modules"].ToString() == "1" &&
+                                        Math.Abs(int.Parse(
+                                            _jsonFile["Оперативная память"]["data"][ramType][ramId.ToString()]["price"]
+                                                .ToString()) - ramPrice) <= 1500)
+                                    {
+                                        ram.Add(ramId.ToString());
+                                    }
+                                }
+
+                                if (ram.Count != 0)
+                                {
+                                    _usersData[curUser]["step"] = "5";
+                                    _usersData[curUser]["possible_ram"] = string.Join(';', ram);
+
+                                    newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                    newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                    for (int i = 0; i < ram.Count; i++)
+                                    {
+                                        newMessageText +=
+                                            $"{i + 1} - {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["name"].ToString()} " +
+                                            $"- {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["price"].ToString()} Руб. за 1 плашку " +
+                                            $"(Итого вы заплатите {int.Parse(_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["price"].ToString()) * 2} Руб.)\n" +
+                                            $"Ссылка: {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["link"].ToString()}\n" +
+                                            $"\n";
+                                    }
+
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                                else
+                                {
+                                    newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                     $"сбалансированную сборку по данной цене. " +
+                                                     $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                    _usersData.Remove(curUser);
+
+                                    newMessageText = $"Для начала напишите /start";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "5")
+                        {
+                            var ram = new List<string>(_usersData[curUser]["possible_ram"].Split(';'));
+                            string ramType =
+                                _jsonFile["Материнские платы"]["data"][_usersData[curUser]["motherboard"]][
+                                    "memory_type"].ToString();
+
+                            hint = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                            for (int i = 0; i < ram.Count; i++)
+                            {
+                                hint +=
+                                    $"{i + 1} - {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["name"].ToString()} " +
+                                    $"- {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["price"].ToString()} Руб. за 1 плашку " +
+                                    $"(Итого вы заплатите {int.Parse(_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["price"].ToString()) * 2} Руб.)\n" +
+                                    $"Ссылка: {_jsonFile["Оперативная память"]["data"][ramType][ram[i]]["link"].ToString()}\n" +
+                                    $"\n";
+                            }
+
+                            if (int.TryParse(message.Text, out var ramInd) &&
+                                (1 <= ramInd && ramInd <= ram.Count))
+                            {
+                                _usersData[curUser]["ram"] = ram[ramInd - 1];
+
+                                newMessageText =
+                                    $"Кажется, с оперативной памятью всё. Теперь нужно выбрать блок питания";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                var power = new List<string>();
+                                var powerPrice = double.Parse(_usersData[curUser]["summa"]) *
+                                                 _percentage["Блок питания"];
+                                if (powerPrice > 10000) powerPrice = 7500;
+
+                                foreach (var powerId in _powerIdsArray)
+                                {
+                                    if (_jsonFile["Блоки питания"]["data"][powerId.ToString()]["power"]
+                                            .ToString() == "-")
+                                    {
+                                        continue;
+                                    }
+
+                                    double powerPower = double.Parse(
+                                        (_jsonFile["Блоки питания"]["data"][powerId.ToString()]["power"]
+                                            .ToString()).Split(' ')[0]);
+                                    double videocardPower = double.Parse(
+                                        (_jsonFile["Видеокарты"]["data"][_usersData[curUser]["videocard"]][
+                                                "recommended_power"]
+                                            .ToString()).Split(' ')[0]);
+
+                                    if ((videocardPower <= powerPower) &&
+                                        (powerPower - videocardPower) < 100 &&
+                                        Math.Abs(int.Parse(
+                                            _jsonFile["Блоки питания"]["data"][powerId.ToString()]["price"]
+                                                .ToString()) - powerPrice) <= 2500)
+                                    {
+                                        power.Add(powerId.ToString());
+                                    }
+                                }
+
+                                if (power.Count != 0)
+                                {
+                                    _usersData[curUser]["step"] = "6";
+                                    _usersData[curUser]["possible_power"] = string.Join(';', power);
+
+                                    newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                    newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                    for (int i = 0; i < power.Count; i++)
+                                    {
+                                        newMessageText +=
+                                            $"{i + 1} - {_jsonFile["Блоки питания"]["data"][power[i]]["name"].ToString()} " +
+                                            $"- {_jsonFile["Блоки питания"]["data"][power[i]]["price"].ToString()} Руб.\n" +
+                                            $"Ссылка: {_jsonFile["Блоки питания"]["data"][power[i]]["link"].ToString()}\n" +
+                                            $"\n";
+                                    }
+
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                                else
+                                {
+                                    newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                     $"сбалансированную сборку по данной цене. " +
+                                                     $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                    _usersData.Remove(curUser);
+
+                                    newMessageText = $"Для начала напишите /start";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
+                        }
+                        else if (_usersData[curUser]["step"] == "6")
+                        {
+                            var power = new List<string>(_usersData[curUser]["possible_power"].Split(';'));
+
+                            hint = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                            for (int i = 0; i < power.Count; i++)
+                            {
+                                hint +=
+                                    $"{i + 1} - {_jsonFile["Блоки питания"]["data"][power[i]]["name"].ToString()} " +
+                                    $"- {_jsonFile["Блоки питания"]["data"][power[i]]["price"].ToString()} Руб.\n" +
+                                    $"Ссылка: {_jsonFile["Блоки питания"]["data"][power[i]]["link"].ToString()}\n" +
+                                    $"\n";
+                            }
+
+                            if (int.TryParse(message.Text, out var powerInd) &&
+                                (1 <= powerInd && powerInd <= power.Count))
+                            {
+                                _usersData[curUser]["power"] = power[powerInd - 1];
+
+                                newMessageText = $"Выбор блока питания завершен. Переходим к охлаждению процессора";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                var coolers = new List<string>();
+                                var coolerPrice = double.Parse(_usersData[curUser]["summa"]) *
+                                                  _percentage["Кулер"];
+                                if (coolerPrice > 5000) coolerPrice = 4500;
+
+                                double coolerHeat = 0.0;
+                                double processorHeat = 0.0;
+                                
+                                foreach (var coolerId in _coolersIdsArray)
+                                {
+                                    coolerHeat = double.Parse(
+                                        (_jsonFile["Кулеры для процессоров"]["data"][coolerId.ToString()][
+                                                "max_power_dissipation"]
+                                            .ToString()).Split(' ')[0]);
+                                    processorHeat = double.Parse(
+                                        (_jsonFile["Процессоры"]["data"][_usersData[curUser]["processor"]]["heat"]
+                                            .ToString()).Split(' ')[0]);
+                                    if (processorHeat <= coolerHeat)
+                                    {
+                                        if (((coolerHeat - processorHeat) < 100) && ((Math.Abs(
+                                                int.Parse(
+                                                    _jsonFile["Кулеры для процессоров"]["data"][coolerId.ToString()][
+                                                        "price"].ToString())) - coolerPrice) <= 1000))
+                                        {
+                                            coolers.Add(coolerId.ToString());
+                                        }
+                                    }
+                                }
+
+                                if (power.Count != 0)
+                                {
+                                    _usersData[curUser]["step"] = "7";
+                                    _usersData[curUser]["possible_coolers"] = string.Join(';', coolers);
+
+                                    newMessageText = $"Мне удалось найти несколько подходящих моделей";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+
+                                    newMessageText = $"Выберите наиболее подходящий вариант и напишите его номер\n\n";
+                                    for (int i = 0; i < coolers.Count; i++)
+                                    {
+                                        newMessageText +=
+                                            $"{i + 1} - {_jsonFile["Кулеры для процессоров"]["data"][coolers[i]]["name"].ToString()} " +
+                                            $"- {_jsonFile["Кулеры для процессоров"]["data"][coolers[i]]["price"].ToString()} Руб.\n" +
+                                            $"Ссылка: {_jsonFile["Кулеры для процессоров"]["data"][coolers[i]]["link"].ToString()}\n" +
+                                            $"\n";
+                                    }
+
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                                else
+                                {
+                                    newMessageText = $"Кажется, в настоящий момент нельзя подобрать " +
+                                                     $"сбалансированную сборку по данной цене. " +
+                                                     $"Измените желаемую стоимость сборки и попытайтесь снова.";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                    _usersData.Remove(curUser);
+
+                                    newMessageText = $"Для начала напишите /start";
+                                    await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                }
+                            }
+                            else
+                            {
+                                newMessageText = $"Похоже что-то пошло не так, попробуйте снова.";
+                                await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
+                                await botClient.SendTextMessageAsync(message.Chat.Id, hint);
+                            }
                         }
                     }
+
+                    // Иначе мы подсказываем ему как начать работу и создаем ему запись в словаре
                     else
                     {
                         if (message.Text == "/start")
                         {
-                            _usersData.Add(key: curUser,
-                                value: new Dictionary<string, string>()
-                                    { { "name", "Bob" }, { "summa", "mnogo deneg" }, { "step", "1" } });
-                            await botClient.SendTextMessageAsync(message.Chat.Id,
-                                $"Давайте начнем! Введите 1, 2 или 3");
+                            var newMessageText = $"Хорошо, давайте начнём! Для начала введите " +
+                                                 $"желаемую стоимость вашей сборки (в рублях)";
+                            _usersData.Add(key: curUser, value: GetEmptyUserDictionary());
+                            await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
                         }
                         else
                         {
-                            await botClient.SendTextMessageAsync(message.Chat.Id,
-                                $"Здравствуйте, я - бот по подбору комплектующих для ПК.\n " +
-                                $"Для начала напишите /start");
+                            var newMessageText = $"Здравствуйте, я - бот по подбору комплектующих для ПК. " +
+                                                 $"Я могу помочь вам с созданием собственной сборки.\n" +
+                                                 $"Для начала напишите /start";
+                            await botClient.SendTextMessageAsync(message.Chat.Id, newMessageText);
                         }
                     }
                 }
             }
+        }
+
+        // Функция возвращает пустой (базовый) словарь для пользователя,
+        // чтобы быстрее начинать новый сеанс с пользователем
+        private static Dictionary<string, string> GetEmptyUserDictionary()
+        {
+            return new Dictionary<string, string>()
+            {
+                { "username", "test" },
+                { "step", "0" },
+                { "summa", "" },
+                { "processor_brand", "" },
+                { "possible_processors", "" },
+                { "processor", "" },
+                { "possible_motherboards", "" },
+                { "motherboard", "" },
+                { "possible_videocards", "" },
+                { "videocard", "" },
+                { "possible_ram", "" },
+                { "ram", "" },
+                { "possible_power", "" },
+                { "power", "" },
+                { "possible_coolers", "" },
+                { "cooler", "" },
+                { "possible_hdd", "" },
+                { "hdd", "" },
+                { "ssd_type", "" },
+                { "possible_ssd", "" },
+                { "ssd", "" }
+            };
         }
 
 
@@ -183,8 +765,10 @@ namespace TGBotEZPC
             var binPath = exePath.Parent.Parent.FullName;
             var jsonPath = $"{binPath}\\data_for_bot.json";
 
+            // Получает объект с данными из JSON файла
             _jsonFile = JsonConvert.DeserializeObject(File.ReadAllText(jsonPath));
 
+            // Создает списки ID товаров по категориям, чтобы можно было использовать их как итерируемый объект
             _processorsIdsArray = JArray.Parse((_jsonFile["Процессоры"]["productIDs"]).ToString());
             _videocardsIdsArray = JArray.Parse((_jsonFile["Видеокарты"]["productIDs"]).ToString());
             _memoryHddIdsArray = JArray.Parse((_jsonFile["Жесткие диски"]["HDD_ids"]).ToString());
@@ -202,7 +786,7 @@ namespace TGBotEZPC
         // main function -----------------------------------------------------------------------------------------------
 
         //Функция запуска программы
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Интерфейс выбора режима программы
             Console.WriteLine($"Введите цифру:\n" +
