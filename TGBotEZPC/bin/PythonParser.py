@@ -8,11 +8,6 @@ import requests
 
 cur_directory = sys.argv[1]
 
-
-# cur_directory = "D:\\RiderPojects\\TgBotEZPC_and_Parser\\TGBotEZPC\\bin"  # Мишаня ПК             // FOR DEBUG //
-# cur_directory = "Твойпутьдобинарейвпроекте"  # Санечка                                            // FOR DEBUG //
-# cur_directory = "D:\\RiderPojects\\ForTestsWithoutGIT\\ForTestsWithoutGIT\\bin"  # Мишаня ноут    // FOR DEBUG //
-
 # Функция получает путь до файла из его названия
 def getPath(file_name):
     global cur_directory
@@ -49,7 +44,7 @@ def getData(categoryID):
                                         cookies=COOKIES,
                                         headers=HEADERS
                                         ).json()
-    time.sleep(random.randint(3, 6))  # Это чтобы сервак нас не забанил
+    time.sleep(random.randint(3, 6))  # Задержка между запросами нужна для избежания блокировки сервером
 
     number_of_items = int(test_response_for_ids["body"]["total"])
 
@@ -95,8 +90,6 @@ def getData(categoryID):
             "status": True,
             "brand": True,
             "propertyTypes": ["KEY"],
-            # Эта штука отвечает за количество характерист | ик
-            # Если не все есть, то возможно поможет увелич V ение этого значения
             "propertiesConfig": {"propertiesPortionSize": 20},
             "multioffer": False,
         }
