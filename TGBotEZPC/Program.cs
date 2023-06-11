@@ -1165,9 +1165,9 @@ namespace TGBotEZPC
             // Здесь может быть проблема с несоответствием пути к интерпретатору,
             // при ее возникновении нужно проверить правильность этого пути
 
-            var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe"; // Mikhail Pshenisnov Desktop
+            // var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe"; // Mikhail Pshenisnov Desktop
             // var pythonPath = @"C:\Users\misha\AppData\Local\Programs\Python\Python311\python.exe"; // Mikhail Pshenisnov Labtop
-            // var pythonPath = @"ТВОЙ ПУТЬ К python.exe"; // Alexander Nikitin
+            var pythonPath = @"C:\Users\Frozin\AppData\Local\Microsoft\WindowsApps\python3.10.exe"; // Alexander Nikitin1
 
             var pythonScriptName = "\\PythonParser.py";
 
@@ -1260,7 +1260,6 @@ namespace TGBotEZPC
             {
                 // Обработка ошибочного ввода, чтобы была
                 Console.WriteLine("Что-то пошло не так, попробуйте снова :( ");
-                GetDataFromJson();
             }
         }
     }
