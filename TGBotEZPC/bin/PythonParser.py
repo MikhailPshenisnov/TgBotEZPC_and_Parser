@@ -49,7 +49,7 @@ def getData(categoryID):
     number_of_items = int(test_response_for_ids["body"]["total"])
 
     if number_of_items is None:
-        return [[], {}, {}]
+        return [[], [], {}]
 
     number_of_pages = math.ceil(number_of_items / 24)
 
