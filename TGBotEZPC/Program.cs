@@ -1167,7 +1167,10 @@ namespace TGBotEZPC
 
             // var pythonPath = @"C:\Users\User\AppData\Local\Programs\Python\Python38-32\python.exe"; // Mikhail Pshenisnov Desktop
             // var pythonPath = @"C:\Users\misha\AppData\Local\Programs\Python\Python311\python.exe"; // Mikhail Pshenisnov Labtop
-            var pythonPath = @"C:\Users\Frozin\AppData\Local\Microsoft\WindowsApps\python3.10.exe"; // Alexander Nikitin1
+            // var pythonPath = @"C:\Users\Frozin\AppData\Local\Microsoft\WindowsApps\python3.10.exe"; // Alexander Nikitin1
+            
+            Console.WriteLine("Введите ваш полный путь до python.exe, иначе парсер не сможет начать работу");
+            string pythonPath = Console.ReadLine();
 
             var pythonScriptName = "\\PythonParser.py";
 
